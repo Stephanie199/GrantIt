@@ -119,7 +119,7 @@
                
                <!-- Manage Wish Button -->
                  	<div class="add_wish">
-                         <a href="#" class="add_wish_button">Add Wish List</a>
+                         <a href="#" class="add_button">Add Wish List</a>
                     </div>
                     <div class="no-float"> </div>
                <!-- END of Manage Wish Button -->
