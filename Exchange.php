@@ -69,8 +69,6 @@
 			$_SESSION['notify'] = 0;
 			echo "createNotif('Login success!');";
 		}
-	} else if($loginStatus === $LOGOUT){
-		echo "createNotif('You have successfully logout.');";
 	}
 ?>
 </script>
