@@ -1,34 +1,56 @@
-var alertBoxContainer = document.createElement('div');
-alertBoxContainer.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
-alertBoxContainer.style.position = 'fixed';
-alertBoxContainer.style.left = alertBoxContainer.style.top = '0';
-alertBoxContainer.style.display = 'none';
-alertBoxContainer.style.width = alertBoxContainer.style.height = '100%';
-alertBoxContainer.style.zIndex = '1001';
+var grayScreen = document.createElement('div');
+grayScreen.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
+grayScreen.style.position = 'fixed';
+grayScreen.style.left = grayScreen.style.top = '0';
+grayScreen.style.display = 'none';
+grayScreen.style.width = grayScreen.style.height = '100%';
+grayScreen.style.zIndex = '1001';
 
 var alertMsgBox = document.createElement('div');
-alertMsgBox.style.maxWidth = '30%';
-alertMsgBox.style.backgroundColor = 'rgba(255, 255, 255, 1)';
+alertMsgBox.style.maxWidth = '25%';
+alertMsgBox.style.backgroundColor = '#faa';
 alertMsgBox.style.borderRadius = '20px';
 alertMsgBox.style.margin = '12.5% auto 0 auto';
 alertMsgBox.style.padding = '20px';
 alertMsgBox.textContent = 'Put your message here!';
 alertMsgBox.style.fontFamily = 'Segoe UI, Tahoma';
 alertMsgBox.style.fontSize = '12pt';
+alertMsgBox.style.display = 'none';
+alertMsgBox.style.border = '2px solid #f33';
 
-alertBoxContainer.appendChild(alertMsgBox);
-document.body.appendChild(alertBoxContainer);
+var notifMsgBox = document.createElement('div');
+notifMsgBox.style.maxWidth = '25%';
+notifMsgBox.style.backgroundColor = '#ffa';
+notifMsgBox.style.borderRadius = '20px';
+notifMsgBox.style.margin = '6.25% auto 0 auto';
+notifMsgBox.style.padding = '20px';
+notifMsgBox.textContent = 'Put your message here!';
+notifMsgBox.style.fontFamily = 'Segoe UI, Tahoma';
+notifMsgBox.style.fontSize = '12pt';
+notifMsgBox.style.display = 'none';
+notifMsgBox.style.border = '2px solid #ff0';
 
-alertBoxContainer.onclick = function (arg){
+grayScreen.appendChild(alertMsgBox);
+grayScreen.appendChild(notifMsgBox);
+document.body.appendChild(grayScreen);
+
+grayScreen.onclick = function (arg){
 	this.style.display = 'none';
+	alertMsgBox.style.display = 'none';
+	notifMsgBox.style.display = 'none';
 };
 
 function createAlert(msg){
 	alertMsgBox.textContent = msg;
-	alertBoxContainer.style.display = 'block';
+	grayScreen.style.display = 'block';
+	alertMsgBox.style.display = 'block';
 }
 
-
+function createNotif(msg){
+	notifMsgBox.textContent = msg;
+	grayScreen.style.display = 'block';
+	notifMsgBox.style.display = 'block';
+}
 
 document.addEventListener('DOMContentLoaded', function (arg){
 	// SIGN UP BUTTONS, FIELD, AND FORM
@@ -85,12 +107,12 @@ document.addEventListener('DOMContentLoaded', function (arg){
 		var password = signUpPasswordField.value;
 		var confirmation = signUpConfirmationField.value;
 		
-		signUpFullNameField.name = 'sign_up_full_name';
-		signUpEmailField.name = 'sign_up_email';
-		signUpPasswordField.name = 'sign_up_password';
-		signUpConfirmationField.name = 'sign_up_confirm_password';
-		
 		if(fullName && email && password && confirmation && (password == confirmation)){
+			signUpFullNameField.name = 'sign_up_full_name';
+			signUpEmailField.name = 'sign_up_email';
+			signUpPasswordField.name = 'sign_up_password';
+			signUpConfirmationField.name = 'sign_up_confirm_password';
+			
 			signUpForm.action = 'php/registration.php';
 			signUpForm.target = '_top';
 			signUpForm.method = 'post';
@@ -130,6 +152,22 @@ document.addEventListener('DOMContentLoaded', function (arg){
 	};
 	
 	loginSubmitBtn.onclick = function (arg){
+		var email = loginEmailField.value;
+		var password = loginPasswordField.value;
 		
+		if(email && password){
+			loginEmailField.name = 'login_email';
+			loginPasswordField.name = 'login_password';
+			
+			loginForm.action = 'php/authentication.php';
+			loginForm.target = '_top';
+			loginForm.method = 'post';
+			loginForm.submit();
+		} else{
+			createAlert('Do not leave any fields blank!');
+		}
 	};
+	
+	var profileBtn = document.getElementById('nav2');
+	profileBtn.style.display = 'none';
 });
