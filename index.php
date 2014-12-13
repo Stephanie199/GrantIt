@@ -239,25 +239,25 @@ where people can exchange the desired items with their own items (either first-h
         <h2 class="sign_up">Sign Up!</h2>
 		<div>
 			<div  class="wrapper">
-				<span>Full Name:</span>
+				<span>Full Name:</span><br>
 				<input id="sign_up_full_name" type="text" class="input" >
 			</div>
 			<div  class="wrapper">
-				<span>Email:</span>
+				<span>Email:</span><br>
 				<input id="sign_up_email" type="text" class="input" >
 				</div>
 			<div  class="wrapper">
-				<span>Password:</span>
+				<span>Password:</span><br>
 				<input id="sign_up_password" type="text" class="input" >
 				</div>
 			<div  class="wrapper">
-				<span>Confirm Password:</span>
+				<span>Confirm Password:</span><br>
 				<input id="sign_up_confirm_password" type="text" class="input" >
 			</div>
 			<a href="#" id='sign_up_submit_button'>Sign Up!</a>
-			<a href="#" id='sign_up_close_button'>Close</a>
-                <a href="#" id='login_simple_link'>Already a member? Sign In!</a>
-                <div class="no-float"> </div>
+			<a href="#" id='sign_up_close_button'>Close</a><br>
+            <a href="#" id='login_simple_link'>Already a member? Sign In!</a>
+            <div class="no-float"> </div>
                 
 		</div>
 	</form>
@@ -270,16 +270,16 @@ where people can exchange the desired items with their own items (either first-h
         <h2 class="login">Login!</h2>
 		<div>
 			<div  class="wrapper">
-				<span>Email:</span>
+				<span>Email:</span> <br>
 				<input id="login_email" type="text" class="input" >
 				</div>
 			<div class="wrapper">
-				<span>Password:</span>
+				<span>Password:</span> <br>
 				<input id="login_password" type="text" class="input" >
 			</div>
                <a href="#" id='login_submit_button'>Login</a>
                <a href="#" id='login_close_button'>Close</a>
-               <a href="#" id='sign_up_simple_link'>Not a member? Sign Up!</a>
+               <br><a href="#" id='sign_up_simple_link'>Not a member? Sign Up!</a>
             <div class="no-float"> </div>
 		</div>
 	</form>
