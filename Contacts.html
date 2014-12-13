@@ -45,7 +45,7 @@
                         <li id="nav3"><a href="Exchange.html">Exchange<span>List</span></a></li>
 						<li id="nav5" class="active"><a href="Contacts.html">Contacts<span>Our Address</span></a></li>
                         <li id="nav2"><a href="#">Profile<span>Me</span></a></li> <!-- After login -->
-                        <li id="nav2"><a href="#">Sign In<span>Become a Member</span></a></li> <!-- Before login -->
+                        <li id="nav6"><a href="#">Sign In<span>Become a Member</span></a></li> <!-- Before login -->
 					</ul>
 				</nav>
 				</div>
@@ -170,5 +170,61 @@
 		tabs.init();
 	})
 </script>
+
+<!-- sign up form -->
+
+<div id="sign_up_field">
+	<form id="SignUpForm" method="post">
+        <h2 class="sign_up">Sign Up!</h2>
+		<div>
+			<div  class="wrapper">
+				<span>Full Name:</span>
+				<input id="sign_up_full_name" type="text" class="input" >
+			</div>
+			<div  class="wrapper">
+				<span>Email:</span>
+				<input id="sign_up_email" type="text" class="input" >
+				</div>
+			<div  class="wrapper">
+				<span>Password:</span>
+				<input id="sign_up_password" type="text" class="input" >
+				</div>
+			<div  class="wrapper">
+				<span>Confirm Password:</span>
+				<input id="sign_up_confirm_password" type="text" class="input" >
+			</div>
+				<a href="#" id='sign_up_submit_button'>Sign Up!</a>
+				<a href="#" id='sign_up_close_button'>Close</a>
+                <div class="no-float"> </div>
+		</div>
+	</form>
+</div>
+
+<!-- login form -->
+
+<div id="login_field">
+	<form id="LoginForm" method="post">
+        <h2 class="login">Login!</h2>
+		<div>
+			<div  class="wrapper">
+				<span>Email:</span>
+				<input id="login_email" type="text" class="input" >
+				</div>
+			<div class="wrapper">
+				<span>Password:</span>
+				<input id="login_password" type="text" class="input" >
+			</div>
+               <a href="#">Login</a>
+               <a href="#">Close</a>
+            <div class="no-float"> </div>
+		</div>
+	</form>
+</div>
+
+<!--
+<script src='script/constants.js'></script>
+<script src='script/connect.js'></script>
+-->
+<script src='script/main.js'></script>
 </body>
 </html>
