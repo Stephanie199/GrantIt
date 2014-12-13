@@ -44,13 +44,13 @@ header{padding-top:34px; min-height: 150px;}
 #menu li a span{font-size:13px;line-height:1.2em;color:#666666;display:block;letter-spacing:-1px;margin-top:-3px;font-weight:normal}
 #menu li a:hover, #menu .active a{color:#497e04}
 #menu li a:hover span, #menu .active a span{color:#fff}
-#menu #nav1 a{background:url(../images/menu_icon1.png) bottom center no-repeat}
-#menu #nav1 a:hover, #menu #nav1.active a{background:url(../images/menu_icon1_active.png) bottom center no-repeat}
+#menu #nav1 a{background:url(../images/menu_icon1.gif) bottom center no-repeat}
+#menu #nav1 a:hover, #menu #nav1.active a{background:url(../images/menu_icon1_active.gif) bottom center no-repeat}
 #menu #nav2 a, #menu #nav6 a{background:url(../images/menu_icon2.png) bottom center no-repeat}
 #menu #nav2 a:hover, #menu #nav2.active a, #menu #nav6 a:hover, #menu #nav6.active a{background:url(../images/menu_icon2_active.png) bottom center no-repeat}
-#menu #nav3 a{background:url(../images/menu_icon3.gif) bottom center no-repeat}
-#menu #nav3 a:hover, #menu #nav3.active a{background:url(../images/menu_icon3_active.gif) bottom center no-repeat}
-#menu #nav4 a{background:url(../images/menu_icon4.gif) bottom center no-repeat}
+#menu #nav3 a{background:url(../images/menu_icon3.png) bottom center no-repeat}
+#menu #nav3 a:hover, #menu #nav3.active a{background:url(../images/menu_icon3_active.png) bottom center no-repeat}
+#menu #nav4 a{background:url(../images/menu_icon4.png) bottom center no-repeat}
 #menu #nav4 a:hover, #menu #nav4.active a{background:url(../images/menu_icon4_active.gif) bottom center no-repeat}
 #menu #nav5 a{background:url(../images/menu_icon5.gif) bottom center no-repeat}
 #menu #nav5 a:hover, #menu #nav5.active a{background:url(../images/menu_icon5_active.gif) bottom center no-repeat}
