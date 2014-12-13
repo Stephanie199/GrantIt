@@ -13,6 +13,7 @@
 				$loginStatus = $LOGIN_SUCCESS;
 			} else{
 				$loginStatus = $LOGIN_FAIL;
+				unset($_SESSION['full_name']);
 				unset($_SESSION['email']);
 				unset($_SESSION['password']);
 				unset($_SESSION['notify']);

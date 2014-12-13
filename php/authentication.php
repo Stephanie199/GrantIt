@@ -13,6 +13,7 @@
 		$entry = $result -> fetch_assoc();
 		echo $entry['full_name'].' '.$entry['email'].' '.$entry['password'].'<br />';
 		
+		$_SESSION['full_name'] = $entry['full_name'];
 		$_SESSION['email'] = $entry['email'];
 		$_SESSION['password'] = $entry['password'];
 		$_SESSION['notify'] = 1;

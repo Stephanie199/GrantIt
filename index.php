@@ -7,6 +7,7 @@
 	
 	if(isset($_GET['loginFailed']) && $_GET['loginFailed'] === '1'){
 		$loginStatus = $LOGIN_FAILED;
+		unset($_SESSION['full_name']);
 		unset($_SESSION['email']);
 		unset($_SESSION['password']);
 		unset($_SESSION['notify']);
@@ -18,6 +19,7 @@
 				$loginStatus = $LOGIN_SUCCESS;
 			} else{
 				$loginStatus = $LOGIN_FAIL;
+				unset($_SESSION['full_name']);
 				unset($_SESSION['email']);
 				unset($_SESSION['password']);
 				unset($_SESSION['notify']);
@@ -90,9 +92,11 @@
 		echo "createAlert('Login attempt failed!');";
 	} else if($loginStatus === $LOGIN_SUCCESS){
 		echo "isLogin = true;";
+		
 		if(isset($_SESSION['notify']) && $_SESSION['notify'] === 1){
 			$_SESSION['notify'] = 0;
 			echo "createNotif('Login success!');";
+			echo "fullName = $_SESSION[full_name];"
 		}
 	} else if($loginStatus === $LOGOUT){
 		echo "createNotif('You have successfully logout.');";
