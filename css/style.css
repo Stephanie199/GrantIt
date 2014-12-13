@@ -1,5 +1,8 @@
 /* Getting the new tags to behave */
 article, aside, audio, canvas, command, datalist, details, embed, figcaption, figure, footer, header, hgroup, keygen, meter, nav, output, progress, section, source, video{display:block}
+figure{
+	width:270px;
+}
 mark, rp, rt, ruby, summary, time{display:inline }
 /* Left & Right alignment */
 .left {float:left}
@@ -127,7 +130,7 @@ footer a:hover{}
 	margin-bottom:5%;
 }
 
-.wish_button, .exchange_button, .add_wish_button, .table_icon_edit, .table_icon_delete {
+.wish_button, .exchange_button, .add_button, .table_icon_edit, .table_icon_delete {
 	box-shadow:inset 0px 1px 3px 0px #a4e271;
 	-moz-border-radius:5px;
 	-webkit-border-radius:5px;
@@ -158,7 +161,7 @@ footer a:hover{}
 	border:1px solid #74b807;
 }
 
-.add_wish_button {
+.add_button {
 	padding-left:40px;
 	float:left;
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#999', endColorstr='#CCC',GradientType=0);
@@ -174,7 +177,7 @@ footer a:hover{}
 	background: url(../images/add_icon.png) no-repeat 3px #999;
 }
 
-.add_wish_button:hover {
+.add_button:hover {
 	float:left;
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#CCC', endColorstr='#999',GradientType=0);
 	-moz-box-shadow:inset 0px 1px 3px 0px #666666;
@@ -201,7 +204,7 @@ footer a:hover{}
 }
 
 
-.wish_button:hover, .exchange_button:hover  .table_icon_edit:hover, .table_icon_delete:hover {
+.wish_button:hover, .exchange_button:hover, .table_icon_edit:hover, .table_icon_delete:hover {
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #77a809), color-stop(1, #89c403));
 	background:-moz-linear-gradient(top, #77a809 5%, #89c403 100%);
 	background:-webkit-linear-gradient(top, #77a809 5%, #89c403 100%);
@@ -216,14 +219,14 @@ footer a:hover{}
 }
 
 .table_icon_edit:hover{
-	background: url(../images/table_icon_edit.png) no-repeat 3px #89c403;
+	background: url(../images/table_icon_edit.png) no-repeat 3px #77a809;
 }
 
 .table_icon_delete:hover{
-	background: url(../images/table_icon_delete.png) no-repeat 3px #89c403;
+	background: url(../images/table_icon_delete.png) no-repeat 3px #77a809;
 }
 
-.wish_button:active, .exchange_button:active {
+.wish_button:active, .exchange_button:active, .table_icon_edit:active, .table_icon_delete:active {
 	position:relative;
 	top:1px;
 }
@@ -243,7 +246,7 @@ footer a:hover{}
 }
 
 #exchange_description_field{
-	display:block;
+	display:none;
 	position: fixed;
 	left:0px;
 	top:0px;
@@ -257,11 +260,15 @@ footer a:hover{}
 #SignUpForm span, #LoginForm span, #ExchangeDescriptionForm span{width:150px;float:left;line-height:26px}
 #SignUpForm .wrapper, #LoginForm .wrapper, #ExchangeDescriptionForm .wrapper{min-height:50px; }
 #SignUpForm .textarea_box, #LoginForm .textarea_box, #ExchangeDescriptionForm .textarea_box{min-height:275px;width:100%;overflow:hidden;padding-bottom:6px}
-#SignUpForm a#sign_up_simple_link, #LoginForm a#login_simple_link, #SignUpForm a#sign_up_submit_button, #SignUpForm a#sign_up_close_button, #LoginForm a#login_submit_button, #LoginForm a#login_close_button, #ExchangeDescriptionForm .close_button{ margin-top:20px; margin-right:15px; float:left; width:62px;font-style:normal;font-weight:bold;color:#fff;height:32px;line-height:32px;text-decoration:none;background:#60b000;text-align:center}
+#SignUpForm a#sign_up_simple_link, #LoginForm a#login_simple_link, #SignUpForm a#sign_up_submit_button, #SignUpForm a#sign_up_close_button, #LoginForm a#login_submit_button, #LoginForm a#login_close_button { margin-top:20px; margin-right:15px; float:left; width:62px;font-style:normal;font-weight:bold;color:#fff;height:32px;line-height:32px;text-decoration:none;background:#60b000;text-align:center}
+#ExchangeDescriptionForm .close_button{ margin-top:20px; margin-right:15px; float:right; width:62px;font-style:normal;font-weight:bold;color:#fff;height:32px;line-height:32px;text-decoration:none;background:#60b000;text-align:center}
 #SignUpForm a#sign_up_submit_button:hover, #SignUpForm a#sign_up_close_button:hover, #LoginForm a#login_submit_button:hover, #LoginForm a#login_close_button:hover, #ExchangeDescriptionForm .close_button:hover{background:#080808}
 #SignUpForm .input, #LoginForm .input { width:60%;min-height:25px;border:1px solid #e5e5e5;background:#fff;padding:3px 5px;color: #333;font:14px "Trebuchet MS", Arial, Helvetica, sans-serif;margin:0; border-radius:5px;}
 #SignUpForm textarea, #LoginForm textarea {overflow:auto;width:549px;height:258px;border:1px solid #e5e5e5;background:#fff;padding:3px 5px;color:#696968;font:14px "Trebuchet MS", Arial, Helvetica, sans-serif;font-style:italic;margin:0}
 
+.long_text{
+	word-break:break-all;
+}
 
 /* ============================= Manage Wish/Exchange Table ============================= */
 
