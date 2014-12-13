@@ -1,3 +1,32 @@
+<?php
+	require_once('php/connect.php');
+	require_once('php/constants.php');
+	session_start();
+	
+	$loginStatus = $NO_LOGIN;
+	
+	if(isset($_GET['loginFailed']) && $_GET['loginFailed'] === '1'){
+		$loginStatus = $LOGIN_FAILED;
+		unset($_SESSION['email']);
+		unset($_SESSION['password']);
+		unset($_SESSION['notify']);
+	} else if(isset($_SESSION['email']) && isset($_SESSION['password'])){
+		$result = mysqli_query($SQL, "select * from users where email='$_SESSION[email]' and password='$_SESSION[password]';");
+		if($result -> num_rows === 1){
+			$entry = $result -> fetch_assoc();
+			if($_SESSION['email'] === $entry['email'] && $_SESSION['password'] === $entry['password']){
+				$loginStatus = $LOGIN_SUCCESS;
+			} else{
+				$loginStatus = $LOGIN_FAIL;
+				unset($_SESSION['email']);
+				unset($_SESSION['password']);
+				unset($_SESSION['notify']);
+			}
+		}
+	} else if(isset($_GET['logout']) && $_GET['logout'] === '1'){
+		$loginStatus = $LOGOUT;
+	}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,19 +76,40 @@
 		  });
 		});
 	</script>
-	
 </head>
+
 <body id="page1">
+
+<script src="script/msg_box.js"></script>
+<script src="script/global_vars.js"></script>
+<script type='text/javascript'>
+// SCRIPTS ADDED BY PHP
+<?php
+	echo "isLogin = false;";
+	if($loginStatus === $LOGIN_FAILED){
+		echo "createAlert('Login attempt failed!');";
+	} else if($loginStatus === $LOGIN_SUCCESS){
+		echo "isLogin = true;";
+		if(isset($_SESSION['notify']) && $_SESSION['notify'] === 1){
+			$_SESSION['notify'] = 0;
+			echo "createNotif('Login success!');";
+		}
+	} else if($loginStatus === $LOGOUT){
+		echo "createNotif('You have successfully logout.');";
+	}
+?>
+</script>
+
 <div class="body1">
 	<div class="body2">
 		<div class="main zerogrid">
 <!-- header -->
 			<header>
 				<div class="wrapper row">
-				<h1><a href="index.html" id="logo"><img src="images/logo.png" /></a></h1>
+				<h1><a href="index.php" id="logo"><img src="images/logo.png" /></a></h1>
 				<nav>
 					<ul id="menu">
-						<li id="nav1" class="active"><a href="index.html">Home<span>Welcome!</span></a></li>
+						<li id="nav1" class="active"><a href="index.php">Home<span>Welcome!</span></a></li>
 						<li id="nav4"><a href="Wishes.html">Wishes<span>Grant It!</span></a></li>
                         <li id="nav3"><a href="Exchange.html">Exchange<span>List</span></a></li>
 						<li id="nav5"><a href="Contacts.html">Contacts<span>Our Address</span></a></li>
@@ -285,10 +335,6 @@ where people can exchange the desired items with their own items (either first-h
 	</form>
 </div>
 
-<!--
-<script src='script/constants.js'></script>
-<script src='script/connect.js'></script>
--->
 <script src='script/main.js'></script>
 </body>
 </html>

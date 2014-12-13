@@ -15,9 +15,10 @@
 		
 		$_SESSION['email'] = $entry['email'];
 		$_SESSION['password'] = $entry['password'];
+		$_SESSION['notify'] = 1;
 		header('Location: ..');
 	}
 	else{
-		header('Location: ..?loginFailed');
+		header('Location: ..?loginFailed=1');
 	}
 ?>

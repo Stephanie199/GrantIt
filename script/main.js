@@ -1,57 +1,3 @@
-var grayScreen = document.createElement('div');
-grayScreen.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
-grayScreen.style.position = 'fixed';
-grayScreen.style.left = grayScreen.style.top = '0';
-grayScreen.style.display = 'none';
-grayScreen.style.width = grayScreen.style.height = '100%';
-grayScreen.style.zIndex = '1001';
-
-var alertMsgBox = document.createElement('div');
-alertMsgBox.style.maxWidth = '25%';
-alertMsgBox.style.backgroundColor = '#faa';
-alertMsgBox.style.borderRadius = '20px';
-alertMsgBox.style.margin = '12.5% auto 0 auto';
-alertMsgBox.style.padding = '20px';
-alertMsgBox.textContent = 'Put your message here!';
-alertMsgBox.style.fontFamily = 'Segoe UI, Tahoma';
-alertMsgBox.style.fontSize = '12pt';
-alertMsgBox.style.display = 'none';
-alertMsgBox.style.border = '2px solid #f33';
-
-var notifMsgBox = document.createElement('div');
-notifMsgBox.style.maxWidth = '25%';
-notifMsgBox.style.backgroundColor = '#ffa';
-notifMsgBox.style.borderRadius = '20px';
-notifMsgBox.style.margin = '6.25% auto 0 auto';
-notifMsgBox.style.padding = '20px';
-notifMsgBox.textContent = 'Put your message here!';
-notifMsgBox.style.fontFamily = 'Segoe UI, Tahoma';
-notifMsgBox.style.fontSize = '12pt';
-notifMsgBox.style.display = 'none';
-notifMsgBox.style.border = '2px solid #ff0';
-
-grayScreen.appendChild(alertMsgBox);
-grayScreen.appendChild(notifMsgBox);
-document.body.appendChild(grayScreen);
-
-grayScreen.onclick = function (arg){
-	this.style.display = 'none';
-	alertMsgBox.style.display = 'none';
-	notifMsgBox.style.display = 'none';
-};
-
-function createAlert(msg){
-	alertMsgBox.textContent = msg;
-	grayScreen.style.display = 'block';
-	alertMsgBox.style.display = 'block';
-}
-
-function createNotif(msg){
-	notifMsgBox.textContent = msg;
-	grayScreen.style.display = 'block';
-	notifMsgBox.style.display = 'block';
-}
-
 document.addEventListener('DOMContentLoaded', function (arg){
 	// SIGN UP BUTTONS, FIELD, AND FORM
 	// var signUpBtn = document.getElementById('sign_up_simple_link');
@@ -168,6 +114,54 @@ document.addEventListener('DOMContentLoaded', function (arg){
 		}
 	};
 	
+	// PROFILE BUTTON IS VISIBLE IF USER IS LOGGED IN
 	var profileBtn = document.getElementById('nav2');
-	profileBtn.style.display = 'none';
+	var logoutBtn = document.createElement('div');
+	logoutBtn.style.position = 'absolute';
+	logoutBtn.style.zIndex = '1002';
+	logoutBtn.style.top = '0';
+	logoutBtn.style.right = '0';
+	logoutBtn.style.color = '#fff';
+	logoutBtn.style.fontFamily = 'Segoe UI, Tahoma';
+	logoutBtn.style.fontSize = '9pt';
+	logoutBtn.style.display = 'none';
+	logoutBtn.style.cursor = 'default';
+	logoutBtn.textContent = 'Log out';
+	
+	logoutBtn.onmouseenter = function (arg){
+		this.style.textShadow = '0px 0px 3px #fff';
+	};
+	
+	logoutBtn.onmouseleave = function (arg){
+		this.style.textShadow = '0px 0px 0px #000';
+	};
+	
+	logoutBtn.onclick = function (arg){
+		var form = document.createElement('form');
+		form.method = 'get';
+		form.action = 'php/logout.php';
+		form.target = '_top';
+		
+		var input = document.createElement('input');
+		input.name = 'logout';
+		input.type = 'hidden';
+		input.value = '1';
+		
+		form.appendChild(input);
+		document.body.appendChild(form);
+		form.submit();
+	};
+	
+	document.body.appendChild(logoutBtn);
+	
+	if(isLogin){
+		profileBtn.style.display = 'block';
+		loginBtn.style.display = 'none';
+		logoutBtn.style.display = 'block';
+		
+	} else{
+		profileBtn.style.display = 'none';
+		loginBtn.style.display = 'block';
+		logoutBtn.style.display = 'none';
+	}
 });
