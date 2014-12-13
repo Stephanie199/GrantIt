@@ -1,7 +1,9 @@
 <?php
 	require_once('php/connect.php');
 	require_once('php/constants.php');
-	session_start();
+	if(!isset($_SESSION)){
+		session_start();
+	}
 	
 	$loginStatus = $NO_LOGIN;
 	

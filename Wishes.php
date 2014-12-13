@@ -1,16 +1,14 @@
 <?php
 	require_once('php/connect.php');
 	require_once('php/constants.php');
-	session_start();
+	require_once('php/user.php');
+	if(!isset($_SESSION)){
+		session_start();
+	}
 	
 	$loginStatus = $NO_LOGIN;
 	
-	if(isset($_GET['loginFailed']) && $_GET['loginFailed'] === '1'){
-		$loginStatus = $LOGIN_FAILED;
-		unset($_SESSION['email']);
-		unset($_SESSION['password']);
-		unset($_SESSION['notify']);
-	} else if(isset($_SESSION['email']) && isset($_SESSION['password'])){
+	if(isset($_SESSION['email']) && isset($_SESSION['password'])){
 		$result = mysqli_query($SQL, "select * from users where email='$_SESSION[email]' and password='$_SESSION[password]';");
 		if($result -> num_rows === 1){
 			$entry = $result -> fetch_assoc();
@@ -127,49 +125,63 @@
                <!-- Manage Wish Menu -->
                <div class="CSSTableGenerator" >
                
-                <table id='wish_table'>
-                    <tr>
-                        <td>
-                            No.
-                        </td>
-                        <td >
-                            Wish Title
-                        </td>
-                        <td>
-                            Images
-                        </td>
-                        <td>
-                            Description
-                        </td>
-                        <td>
-                            Desired Price (SGD)
-                        </td>
-                        <td width="25%">
-                            
-                        </td>
-                    </tr>
-                    <tr>
-                        <td >
-                            Row 1
-                        </td>
-                        <td>
-                            Row 1
-                        </td>
-                        <td>
-                            Row 1
-                        </td>
-                         <td>
-                            Row 1
-                        </td>
-                         <td>
-                            Row 1
-                        </td>
-                         <td>
-                            <a href ="#" id="wish_table_icon_delete" class="table_icon_delete">Delete</a> 
-                             <a href ="#" id="wish_table_icon_delete" class="table_icon_edit">Edit</a>
-                        </td>
-                    </tr>
-                </table>
+			 <table id='wish_table'>
+				<tr>
+				    <td>
+					   No.
+				    </td>
+				    <td >
+					   Wish Title
+				    </td>
+				    <td>
+					   Images
+				    </td>
+				    <td>
+					   Description
+				    </td>
+				    <td>
+					   Desired Price (SGD)
+				    </td>
+				    <td width="25%">
+					   
+				    </td>
+				</tr>
+				<?php
+					if($loginStatus === $LOGIN_SUCCESS){
+						$wishes = genWish();
+						while($row = $wishes -> fetch_assoc()){
+							echo "<tr>";
+							echo "<td>$row[wid]</td>";
+							echo "<td>$row[title]</td>";
+							echo "<td>$row[image_url]</td>";
+							echo "<td>$row[desc]</td>";
+							echo "<td>$row[price]</td>";
+							echo "</tr>";
+						}
+					}
+				?>
+				<tr>
+					<td >
+						Row 1
+					</td>
+					<td>
+						Row 1
+					</td>
+					<td>
+						Row 1
+					</td>
+					<td>
+						Row 1
+					</td>
+					<td>
+					   Row 1
+					</td>
+					<td>
+						<a href ="#" id="wish_table_icon_delete" class="table_icon_delete">Delete</a> 
+						<a href ="#" id="wish_table_icon_delete" class="table_icon_edit">Edit</a>
+					</td>
+				</tr>
+			 </table>
             </div>
                
                <!-- END of Manage Wish Menu -->

@@ -1,6 +1,8 @@
 <?php
 	require_once('connect.php');
-	session_start();
+	if(!isset($_SESSION)){
+		session_start();
+	}
 	
 	function getRow(){
 		global $SQL;
@@ -16,9 +18,18 @@
 	function getUid(){
 		global $SQL;
 		$entry = getRow();
-		if($entry !== null && isset($entry['uid'])){
+		if($entry !== null){
 			return $entry['uid'];
 		}
 		return null;
+	}
+	
+	function genWish(){
+		global $SQL;
+		$result = mysqli_query($SQL,
+			"select * from users
+			inner join wishes
+			on wishes.uid=$_SESSION[uid];");
+		return $result;
 	}
 ?>
