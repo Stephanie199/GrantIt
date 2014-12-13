@@ -111,15 +111,15 @@
 <!-- content -->
 			<article id="content">
           	   <!-- Manage Wish Button -->
-                 	<div class="manage_wish" id='manage_wish_button'>
+                 	<div class="manage_wish">
                          <a href="#" id="manage_wish_button" class="wish_button">Manage Wish List</a>
                     </div>
                     <div class="no-float"> </div>
                <!-- END of Manage Wish Button -->
                
                <!-- Manage Wish Button -->
-                 	<div class="add_wish" id='add_wish_button'>
-                         <a href="#" class="add_button">Add Wish List</a>
+                 	<div class="add_wish">
+                         <a href="#" class="add_wish_button">Add Wish List</a>
                     </div>
                     <div class="no-float"> </div>
                <!-- END of Manage Wish Button -->
