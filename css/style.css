@@ -215,6 +215,14 @@ footer a:hover{}
 	background-color:#77a809;
 }
 
+.table_icon_edit:hover{
+	background: url(../images/table_icon_edit.png) no-repeat 3px #89c403;
+}
+
+.table_icon_delete:hover{
+	background: url(../images/table_icon_delete.png) no-repeat 3px #89c403;
+}
+
 .wish_button:active, .exchange_button:active {
 	position:relative;
 	top:1px;
