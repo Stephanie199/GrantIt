@@ -233,7 +233,7 @@ footer a:hover{}
 
 
 /* ============================= Manage Wish/Exchange Table ============================= */
-.table_icon_edit {padding: 5px 10px; margin-right: 3px; background: url(../images/table_icon_edit.png) no-repeat #CFC;}
+.table_icon_edit {padding: 5px 10px 5px 20px; margin-right: 5px; background: url(../images/table_icon_edit.png) no-repeat #CFC; color:#000; text-decoration:none; font:"Trebuchet MS", Arial, Helvetica, sans-serifs; font-size:12px;}
 .CSSTableGenerator {
 	margin:20px 0 60px 0;padding:0px;
 	width:100%;
@@ -284,7 +284,6 @@ footer a:hover{}
 	-webkit-border-bottom-left-radius:0px;
 	border-bottom-left-radius:0px;
 }
-.CSSTableGenerator tr:hover td{background-color: #CFC; }
 .CSSTableGenerator tr:nth-child(odd){ background-color:#d4ffaa; }
 .CSSTableGenerator tr:nth-child(even){ background-color:#ffffff; }
 .CSSTableGenerator td{
