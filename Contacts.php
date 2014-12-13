@@ -59,7 +59,6 @@
 <script type='text/javascript'>
 // SCRIPTS ADDED BY PHP
 <?php
-<?php
 	if($loginStatus === $LOGIN_FAILED){
 		echo "isLogin = false;";
 		echo "createAlert('Login attempt failed!');";
@@ -72,7 +71,6 @@
 			echo "createNotif('Login success!');";
 		}
 	}
-?>
 ?>
 </script>
 
