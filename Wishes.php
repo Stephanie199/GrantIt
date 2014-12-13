@@ -413,5 +413,6 @@
 </div>
 
 <script src='script/main.js'></script>
+<script src='script/wishes.js'></script>
 </body>
 </html>
