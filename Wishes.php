@@ -387,27 +387,27 @@
 
 <div id="add_wish_field">
 	<form id="AddWishForm" method="post">
-        <h2 class="add_wish">Add Wishes!</h2>
+		<h2 class="add_wish">Add Wishes!</h2>
 		<div>
 			<div  class="wrapper">
 				<span>Wish Title:</span>
 				<input id="add_wish_title" type="text" class="input" >
 			</div>
-            <div class="wrapper">
+			<div class="wrapper">
 				<span>Image Link:</span>
 				<input id="add_wish_image_link" type="text" class="input" >
 			</div>
 			<div  class="wrapper">
 				<span>Desired Price:</span>
 				<input id="add_wish_price" type="text" class="input" >
-				</div>
+			</div>
 			<div  class="wrapper">
 				<span>Description:</span><br>
 				<textarea id="add_wish_description"> </textarea>
-				</div>
+			</div>
 			<a href="#" id='add_wish_submit_button'>Sign Up!</a>
 			<a href="#" id='add_wish_close_button'>Close</a>
-            <div class="no-float"> </div>   
+			<div class="no-float"> </div>   
 		</div>
 	</form>
 </div>
