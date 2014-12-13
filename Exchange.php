@@ -116,7 +116,7 @@
             
              <!-- Manage Wish Button -->
                  	<div class="add_ex">
-                         <a href="#" class="add_button">Add Item for Exchange List</a>
+                         <a href="#" id='add_button' class="add_button">Add Item for Exchange List</a>
                     </div>
                     <div class="no-float"> </div>
                <!-- END of Manage Wish Button -->
@@ -401,5 +401,6 @@
 </div>
 
 <script src='script/main.js'></script>
+<script src='script/exchange.js'></script>
 </body>
 </html>

@@ -51,4 +51,16 @@ document.addEventListener('DOMContentLoaded', function (arg){
 			createAlert('Please do not leave any fields blank!');
 		}
 	};
+	
+	var wishTable = document.getElementById('wish_table');
+	
+	if(!isLogin){
+		wishTable.parentNode.style.display = 'none';
+		addWishBtn.parentNode.style.display = 'none';
+		manageWishBtn.parentNode.style.display = 'none';
+	} else{
+		wishTable.parentNode.style.display = 'block';
+		addWishBtn.parentNode.style.display = 'block';
+		manageWishBtn.parentNode.style.display = 'block';
+	}
 });
