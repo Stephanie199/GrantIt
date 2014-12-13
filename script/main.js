@@ -125,8 +125,9 @@ document.addEventListener('DOMContentLoaded', function (arg){
 	logoutBtn.style.fontFamily = 'Segoe UI, Tahoma';
 	logoutBtn.style.fontSize = '9pt';
 	logoutBtn.style.display = 'none';
-	logoutBtn.style.cursor = 'default';
+	logoutBtn.style.cursor = 'pointer';
 	logoutBtn.style.fontWeight = 'normal';
+	logoutBtn.style.background = '';
 	logoutBtn.textContent = 'Log out';
 	
 	logoutBtn.onmouseenter = function (arg){
@@ -155,10 +156,26 @@ document.addEventListener('DOMContentLoaded', function (arg){
 	
 	document.body.appendChild(logoutBtn);
 	
+	var nameContainer = document.createElement('div');
+	nameContainer.style.position = 'absolute';
+	nameContainer.style.left = '0';
+	nameContainer.style.top = '0';
+	nameContainer.style.zIndex = '1003';
+	nameContainer.style.fontFamily = 'Segoe UI, Tahoma';
+	nameContainer.style.fontSize = '11pt';
+	nameContainer.style.fontWeight = 'normal';
+	nameContainer.style.color = '#fff';
+	nameContainer.style.display = 'none';
+	nameContainer.style.background = '';
+	document.body.appendChild(nameContainer);
+	
 	if(isLogin){
 		profileBtn.style.display = 'block';
 		loginBtn.style.display = 'none';
 		logoutBtn.style.display = 'block';
+		
+		nameContainer.textContent = 'Hi, ' + fullName;
+		nameContainer.style.display = 'block';
 		
 	} else{
 		profileBtn.style.display = 'none';

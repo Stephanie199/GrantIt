@@ -66,11 +66,13 @@
 <script type='text/javascript'>
 // SCRIPTS ADDED BY PHP
 <?php
-	echo "isLogin = false;";
 	if($loginStatus === $LOGIN_FAILED){
+		echo "isLogin = false;";
 		echo "createAlert('Login attempt failed!');";
 	} else if($loginStatus === $LOGIN_SUCCESS){
 		echo "isLogin = true;";
+		echo "fullName = '$_SESSION[full_name]';";
+		
 		if(isset($_SESSION['notify']) && $_SESSION['notify'] === 1){
 			$_SESSION['notify'] = 0;
 			echo "createNotif('Login success!');";
