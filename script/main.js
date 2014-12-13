@@ -13,6 +13,8 @@ alertMsgBox.style.borderRadius = '20px';
 alertMsgBox.style.margin = '12.5% auto 0 auto';
 alertMsgBox.style.padding = '20px';
 alertMsgBox.textContent = 'Put your message here!';
+alertMsgBox.style.fontFamily = 'Segoe UI, Tahoma';
+alertMsgBox.style.fontSize = '12pt';
 
 alertBoxContainer.appendChild(alertMsgBox);
 document.body.appendChild(alertBoxContainer);
@@ -30,16 +32,20 @@ function createAlert(msg){
 
 document.addEventListener('DOMContentLoaded', function (arg){
 	// SIGN UP BUTTONS, FIELD, AND FORM
-	var signUpBtn = document.getElementById('nav6');
+	// var signUpBtn = document.getElementById('sign_up_simple_link');
 	var signUpField = document.getElementById('sign_up_field');
 	var signUpForm = document.getElementById('SignUpForm');
 	var signUpSubmitBtn = document.getElementById('sign_up_submit_button');
 	var signUpCloseBtn = document.getElementById('sign_up_close_button');
+	var signUpSimpleBtn = document.getElementById('sign_up_simple_link');
 	
 	// LOGIN BUTTON, FIELD, AND FORM
-	// LOGIN BUTTON MISSING
+	var loginBtn = document.getElementById('nav6');
 	var loginField = document.getElementById('login_field');
 	var loginForm = document.getElementById('LoginForm');
+	var loginCloseBtn = document.getElementById('login_close_button');
+	var loginSubmitBtn = document.getElementById('login_submit_button');
+	var loginSimpleBtn = document.getElementById('login_simple_link');
 	
 	// SIGN UP INPUT FIELDS
 	var signUpFullNameField = document.getElementById('sign_up_full_name');
@@ -48,10 +54,18 @@ document.addEventListener('DOMContentLoaded', function (arg){
 	var signUpConfirmationField = document.getElementById('sign_up_confirm_password');
 	signUpPasswordField.type = signUpConfirmationField.type = 'password';
 	
+	// LOGIN INPUT FIELDS
+	var loginEmailField = document.getElementById('login_email');
+	var loginPasswordField = document.getElementById('login_password');
+	loginPasswordField.type = 'password';
+	
 	// SIGN UP EVENT HANDLER
+	/*
+	// THERE IS NO SIGN UP BUTTON
 	signUpBtn.onclick = function (arg){
-		signUpField.style.display = 'block';
+		
 	};
+	*/
 	
 	signUpForm.onclick = function (arg){
 		arg.stopPropagation();
@@ -81,17 +95,41 @@ document.addEventListener('DOMContentLoaded', function (arg){
 			signUpForm.target = '_top';
 			signUpForm.method = 'post';
 			signUpForm.submit();
+		} else if(password !== confirmation){
+			createAlert('Password and confirm password must match!');
 		} else{
-			createAlert('Please fill in all the fields!');
+			createAlert('Do not leave any fields blank!');
 		}
 	};
 	
+	signUpSimpleBtn.onclick = function (arg){
+		loginField.style.display = 'none';
+		signUpField.style.display = 'block';
+	}
+	
 	// LOGIN EVENT HANDLER
+	loginBtn.onclick = function (arg){
+		loginField.style.display = 'block';
+	};
+	
 	loginField.onclick = function (arg){
 		loginField.style.display = 'none';
 	};
 	
 	loginForm.onclick = function (arg){
 		arg.stopPropagation();
+	};
+	
+	loginCloseBtn.onclick = function (arg){
+		loginField.style.display = 'none';
+	};
+	
+	loginSimpleBtn.onclick = function (arg){
+		signUpField.style.display = 'none';
+		loginField.style.display = 'block';
+	};
+	
+	loginSubmitBtn.onclick = function (arg){
+		
 	};
 });

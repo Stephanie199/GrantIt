@@ -10,4 +10,6 @@
 	
 	mysqli_query($SQL, "insert into users (full_name, email, password) values ('$fullName', '$email', '$password');");
 	
+	echo 'registration success';
+	header('Location: ..');
 ?>
