@@ -254,8 +254,8 @@ where people can exchange the desired items with their own items (either first-h
 				<span>Confirm Password:</span>
 				<input id="sign_up_confirm_password" type="text" class="input" >
 			</div>
-				<a href="#" id='sign_up_submit_button'>Sign Up!</a>
-				<a href="#" id='sign_up_close_button'>Close</a>
+			<a href="#" id='sign_up_submit_button'>Sign Up!</a>
+			<a href="#" id='sign_up_close_button'>Close</a>
                 <a href="#" id='login_simple_link'>Already a member? Sign In!</a>
                 <div class="no-float"> </div>
                 
