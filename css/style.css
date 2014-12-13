@@ -245,7 +245,18 @@ footer a:hover{}
 	z-index:1000;
 }
 
-#exchange_description_field{
+#add_wish_field{ /* combined with above once done styling */
+	display:block;
+	position: fixed;
+	left:0px;
+	top:0px;
+	background-color: rgba(153,153,153,0.5);
+	width:100%;
+	height:100%;
+	z-index:1000;
+}
+
+#exchange_description_field, #wish_description_field{ /* combined with above once done styling */
 	display:none;
 	position: fixed;
 	left:0px;
@@ -256,15 +267,24 @@ footer a:hover{}
 	z-index:1000;
 }
 
-#SignUpForm, #LoginForm, #ExchangeDescriptionForm  {background-color:#FFF; border-radius:10px; width: 30%; margin: 5% auto 0 auto; padding:0.3% 2% 4.5% 2%;}
-#SignUpForm span, #LoginForm span, #ExchangeDescriptionForm span{width:150px;float:left;line-height:26px}
-#SignUpForm .wrapper, #LoginForm .wrapper, #ExchangeDescriptionForm .wrapper{min-height:50px; }
-#SignUpForm .textarea_box, #LoginForm .textarea_box, #ExchangeDescriptionForm .textarea_box{min-height:275px;width:100%;overflow:hidden;padding-bottom:6px}
-#SignUpForm a#sign_up_simple_link, #LoginForm a#login_simple_link, #SignUpForm a#sign_up_submit_button, #SignUpForm a#sign_up_close_button, #LoginForm a#login_submit_button, #LoginForm a#login_close_button { margin-top:20px; margin-right:15px; float:left; width:62px;font-style:normal;font-weight:bold;color:#fff;height:32px;line-height:32px;text-decoration:none;background:#60b000;text-align:center}
-#ExchangeDescriptionForm .close_button{ margin-top:20px; margin-right:15px; float:right; width:62px;font-style:normal;font-weight:bold;color:#fff;height:32px;line-height:32px;text-decoration:none;background:#60b000;text-align:center}
-#SignUpForm a#sign_up_submit_button:hover, #SignUpForm a#sign_up_close_button:hover, #LoginForm a#login_submit_button:hover, #LoginForm a#login_close_button:hover, #ExchangeDescriptionForm .close_button:hover{background:#080808}
-#SignUpForm .input, #LoginForm .input { width:60%;min-height:25px;border:1px solid #e5e5e5;background:#fff;padding:3px 5px;color: #333;font:14px "Trebuchet MS", Arial, Helvetica, sans-serif;margin:0; border-radius:5px;}
-#SignUpForm textarea, #LoginForm textarea {overflow:auto;width:549px;height:258px;border:1px solid #e5e5e5;background:#fff;padding:3px 5px;color:#696968;font:14px "Trebuchet MS", Arial, Helvetica, sans-serif;font-style:italic;margin:0}
+#SignUpForm, #LoginForm, #ExchangeDescriptionForm, #WishDescriptionForm, #AddWishForm  {background-color:#FFF; border-radius:10px; width: 30%; margin: 5% auto 0 auto; padding:0.3% 2% 4.5% 2%;}
+
+#ExchangeDescriptionForm, #WishDescriptionForm  { max-height:500px; overflow-y:scroll;}
+
+#SignUpForm span, #LoginForm span, #ExchangeDescriptionForm span, #WishDescriptionForm span, #AddWishForm span{width:150px;float:left;line-height:26px}
+
+#SignUpForm .wrapper, #LoginForm .wrapper, #ExchangeDescriptionForm .wrapper, #WishDescriptionForm .wrapper, #AddWishForm .span{min-height:50px; }
+
+#SignUpForm .textarea_box, #LoginForm .textarea_box, #AddWishForm .textarea_box{min-height:275px;width:100%;overflow:hidden;padding-bottom:6px}
+
+#SignUpForm a#sign_up_simple_link, #LoginForm a#login_simple_link, #SignUpForm a#sign_up_submit_button, #SignUpForm a#sign_up_close_button, #LoginForm a#login_submit_button, #LoginForm a#login_close_button, #AddWishForm a#add_wish_submit_button, #AddWishForm a#add_wish_close_button { margin-top:20px; margin-right:15px; float:left; width:62px;font-style:normal;font-weight:bold;color:#fff;height:32px;line-height:32px;text-decoration:none;background:#60b000;text-align:center}
+
+.close_button, .grantit_button{ margin-top:20px; margin-right:15px; float:right; width:62px;font-style:normal;font-weight:bold;color:#fff;height:32px;line-height:32px;text-decoration:none;background:#60b000;text-align:center}
+
+#SignUpForm a#sign_up_submit_button:hover, #SignUpForm a#sign_up_close_button:hover, #LoginForm a#login_submit_button:hover, #LoginForm a#login_close_button:hover, .close_button:hover, .grantit_button:hover, #AddWishForm a#add_wish_submit_button:hover, #AddWishForm a#add_wish_close_button:hover{background:#080808}
+
+#SignUpForm .input, #LoginForm .input, #AddWishForm .input{ width:60%;min-height:25px;border:1px solid #e5e5e5;background:#fff;padding:3px 5px;color: #333;font:14px "Trebuchet MS", Arial, Helvetica, sans-serif;margin:0; border-radius:5px;}
+#SignUpForm textarea, #LoginForm textarea, #AddWishForm textarea {overflow:auto;width:549px;height:258px;border:1px solid #e5e5e5;background:#fff;padding:3px 5px;color:#696968;font:14px "Trebuchet MS", Arial, Helvetica, sans-serif;font-style:italic;margin:0}
 
 .long_text{
 	word-break:break-all;

@@ -360,11 +360,11 @@
 -->
 <script src='script/main.js'></script>
 
-<!-- Exchange Item description field -->
+<!-- Exchange Item description field / Read more form -->
 
 <div id="wish_description_field">
 	<form id="WishDescriptionForm" method="post">
-        <h2 class="login">Wish List Title</h2>
+        <h2 class="wish_title">Wish List Title</h2>
 		<div>
         	<div class="wrapper">
 				<div><center><img src="images/page2_img3.jpg" /></center></div><br>
@@ -378,7 +378,37 @@
 				<span>SGD $100 </span>
 			</div>
                <a href="#" class="close_button">Close</a>
+               <a href="#" class="grantit_button">GrantIt!</a>
            <div class="no-float"> </div>
+		</div>
+	</form>
+</div>
+
+<!-- add wish form -->
+
+<div id="add_wish_field">
+	<form id="AddWishForm" method="post">
+        <h2 class="add_wish">Sign Up!</h2>
+		<div>
+			<div  class="wrapper">
+				<span>Wish Title:</span><br>
+				<input id="add_wish_title" type="text" class="input" >
+			</div>
+            <div  class="wrapper">
+				<span>Image Link:</span><br>
+				<input id="add_wish_image_link" type="text" class="input" >
+			</div>
+			<div  class="wrapper">
+				<span>Desired Price:</span><br>
+				<input id="add_wish_price" type="text" class="input" >
+				</div>
+			<div  class="wrapper">
+				<span>Description:</span><br>
+				<textarea id="add_wish_description"> </textarea>
+				</div>
+			<a href="#" id='add_wish_submit_button'>Sign Up!</a>
+			<a href="#" id='add_wish_close_button'>Close</a>
+            <div class="no-float"> </div>   
 		</div>
 	</form>
 </div>
