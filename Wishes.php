@@ -127,7 +127,7 @@
                <!-- Manage Wish Menu -->
                <div class="CSSTableGenerator" >
                
-                <table >
+                <table id='wish_table'>
                     <tr>
                         <td>
                             No.
