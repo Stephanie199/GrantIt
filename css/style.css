@@ -6,7 +6,7 @@ mark, rp, rt, ruby, summary, time{display:inline }
 .right {float:right}
 .wrapper {width:100%;overflow:hidden}
 /* Global properties ======================================================== */
-body{background:#000;border:0;font:14px "Trebuchet MS", Arial, Helvetica, sans-serif;color: #666;line-height:22px;}
+body{background:#000;border:0;font:14px "Trebuchet MS", Arial, Helvetica, sans-serif;color: #666;line-height:20px;}
 .ic, .ic a {border:0;float:right;background:#fff;color:#f00;width:50%;line-height:10px;font-size:10px;margin:-220% 0 0 0;overflow:hidden;padding:0}
 .css3{border-radius:8px;-moz-border-radius:8px;-webkit-border-radius:8px;box-shadow:0 0 4px rgba(0, 0, 0, .4);-moz-box-shadow:0 0 4px rgba(0, 0, 0, .4);-webkit-box-shadow:0 0 4px rgba(0, 0, 0, .4);position:relative}
 .body1{background:url(../images/bg.jpg) bottom center repeat}
@@ -21,7 +21,7 @@ body{background:#000;border:0;font:14px "Trebuchet MS", Arial, Helvetica, sans-s
 a{color:#696969;text-decoration:underline;outline:none}
 a:hover{text-decoration:none}
 h1{float:left}
-h2{font-size:40px;font-style:normal;font-weight:400;line-height:1.2em;padding:38px 0 11px 0;color:#000;letter-spacing:-1px}
+h2{font-size:40px;font-style:normal;font-weight:400;line-height:1.5em;padding:38px 0 11px 0;color:#000;letter-spacing:-1px}
 h2.under{border-bottom:1px solid #e5e5e5;margin-bottom:25px}
 h2.sign_up{border-bottom:1px solid #e5e5e5;margin-bottom:25px; font:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:30px; color:#030;}
 h3{font-size:26px;color:#000;line-height:1.2em;letter-spacing:-0px;padding-bottom:16px;font-weight:400;font-style:normal}
@@ -127,7 +127,7 @@ footer a:hover{}
 	margin-bottom:5%;
 }
 
-.wish_button, .exchange_button, .add_wish_button {
+.wish_button, .exchange_button, .add_wish_button, .table_icon_edit {
 	box-shadow:inset 0px 1px 3px 0px #a4e271;
 	-moz-border-radius:5px;
 	-webkit-border-radius:5px;
@@ -143,7 +143,7 @@ footer a:hover{}
 	text-shadow:0px -1px 0px #528009;
 }
 
-.wish_button, .exchange_button {
+.wish_button, .exchange_button, .table_icon_edit {
 	float:right;
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#89c403', endColorstr='#77a809',GradientType=0);
 	background-color:#89c403;
@@ -164,16 +164,21 @@ footer a:hover{}
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#999', endColorstr='#CCC',GradientType=0);
 	-moz-box-shadow:inset 0px 1px 3px 0px #666666;
 	-webkit-box-shadow:inset 0px 1px 3px 0px #CCCCCC;
-	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #999), color-stop(1, #666666));
-	background:-moz-linear-gradient(top, #999 5%, #666666 100%);
-	background:-webkit-linear-gradient(top, #999 5%, #666666 100%);
-	background:-o-linear-gradient(top, #999 5%, #666666 100%);
-	background:-ms-linear-gradient(top, #999 5%, #666666 100%);
-	background:linear-gradient(to bottom, #999  5%, #666666 100%);
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #D2D2D2), color-stop(1, #666666));
+	background:-moz-linear-gradient(top, #D2D2D2 5%, #666666 100%);
+	background:-webkit-linear-gradient(top, #D2D2D2 5%, #666666 100%);
+	background:-o-linear-gradient(top, #D2D2D2 5%, #666666 100%);
+	background:-ms-linear-gradient(top, #D2D2D2 5%, #666666 100%);
+	background:linear-gradient(to bottom, #D2D2D2  5%, #666666 100%);
 	border:1px solid #666666;
 	background: url(../images/add_icon.png) no-repeat 3px #999;
 }
 
+
+.table_icon_edit{
+	padding-left:40px;
+	background: url(../images/table_icon_edit.png) no-repeat 3px #89c403;
+}
 .add_wish_button:hover {
 	float:left;
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#CCC', endColorstr='#999',GradientType=0);
@@ -222,18 +227,18 @@ footer a:hover{}
 
 
 #SignUpForm, #LoginForm  {background-color:#FFF; border-radius:10px; width: 30%; margin: 5% auto 0 auto; padding:0.3% 2% 4.5% 2%;}
-#SignUpForm a#sign_up_simple_link, #LoginForm a#login_simple_link{text-decoration:underline; float:left; margin-top:23px;};
+#SignUpForm a#sign_up_simple_link, #LoginForm a#login_simple_link{text-decoration:underline; float:left; margin-top:30px;};
 #SignUpForm span, #LoginForm span{width:150px;float:left;line-height:26px}
 #SignUpForm .wrapper, #LoginForm .wrapper{min-height:50px; }
 #SignUpForm .textarea_box, #LoginForm .textarea_box{min-height:275px;width:100%;overflow:hidden;padding-bottom:6px}
 #SignUpForm a#sign_up_submit_button, #SignUpForm a#sign_up_close_button, #LoginForm a#login_submit_button, #LoginForm a#login_close_button{ margin-top:20px; margin-right:15px; float:left; width:62px;font-style:normal;font-weight:bold;color:#fff;height:32px;line-height:32px;text-decoration:none;background:#60b000;text-align:center}
 #SignUpForm a#sign_up_submit_button:hover, #SignUpForm a#sign_up_close_button:hover, #LoginForm a#login_submit_button:hover, #LoginForm a#login_close_button:hover{background:#080808}
-#SignUpForm .input, #LoginForm .input {width:70%;min-height:25px;border:1px solid #e5e5e5;background:#fff;padding:3px 5px;color: #333;font:14px "Trebuchet MS", Arial, Helvetica, sans-serif;margin:0; border-radius:5px;}
+#SignUpForm .input, #LoginForm .input { float:right; width:80%;min-height:25px;border:1px solid #e5e5e5;background:#fff;padding:3px 5px;color: #333;font:14px "Trebuchet MS", Arial, Helvetica, sans-serif;margin:0; border-radius:5px;}
 #SignUpForm textarea, #LoginForm textarea {overflow:auto;width:549px;height:258px;border:1px solid #e5e5e5;background:#fff;padding:3px 5px;color:#696968;font:14px "Trebuchet MS", Arial, Helvetica, sans-serif;font-style:italic;margin:0}
 
 
 /* ============================= Manage Wish/Exchange Table ============================= */
-.table_icon_edit {padding: 5px 10px 5px 20px; margin-right: 5px; background: url(../images/table_icon_edit.png) no-repeat #CFC; color:#000; text-decoration:none; font:"Trebuchet MS", Arial, Helvetica, sans-serifs; font-size:12px;}
+
 .CSSTableGenerator {
 	margin:20px 0 60px 0;padding:0px;
 	width:100%;
