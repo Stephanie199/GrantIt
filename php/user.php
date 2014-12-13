@@ -26,10 +26,11 @@
 	
 	function genWish(){
 		global $SQL;
+		$user = getRow();
 		$result = mysqli_query($SQL,
 			"select * from users
 			inner join wishes
-			on wishes.uid=$_SESSION[uid];");
+			on wishes.uid=users.uid and users.uid=$user[uid];");
 		return $result;
 	}
 ?>

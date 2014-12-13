@@ -156,10 +156,16 @@
 							echo "<td>$row[image_url]</td>";
 							echo "<td>$row[desc]</td>";
 							echo "<td>$row[price]</td>";
+							echo 
+								"<td>
+									<a href ='#' class='table_icon_delete'>Delete</a> 
+									<a href ='#' class='table_icon_edit'>Edit</a>
+								</td>";
 							echo "</tr>";
 						}
 					}
 				?>
+				<!--
 				<tr>
 					<td >
 						Row 1
@@ -181,6 +187,7 @@
 						<a href ="#" id="wish_table_icon_delete" class="table_icon_edit">Edit</a>
 					</td>
 				</tr>
+				-->
 			 </table>
             </div>
                
