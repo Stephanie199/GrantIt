@@ -369,7 +369,34 @@
 	</form>
 </div>
 
+<!-- add exchange item form -->
 
+<div id="add_exchange_item_field">
+	<form id="AddExchangeItemForm" method="post">
+        <h2 class="add_wish">Add Item for Exchange!</h2>
+		<div>
+			<div  class="wrapper">
+				<span>Exchange Item name:</span>
+				<input id="add_exchange_item_name" type="text" class="input" >
+			</div>
+            <div class="wrapper">
+				<span>Image Link:</span>
+				<input id="add_exchange_item_image_link" type="text" class="input" >
+			</div>
+			<div  class="wrapper">
+				<span>Minimum Price:</span>
+				<input id="add_exchange_item_price" type="text" class="input" >
+				</div>
+			<div  class="wrapper">
+				<span>Description:</span><br>
+				<textarea id="add_exchange_item_description"> </textarea>
+				</div>
+			<a href="#" id='add_exchange_item_submit_button'>Sign Up!</a>
+			<a href="#" id='add_exchange_item_close_button'>Close</a>
+            <div class="no-float"> </div>   
+		</div>
+	</form>
+</div>
 
 <script src='script/main.js'></script>
 </body>
