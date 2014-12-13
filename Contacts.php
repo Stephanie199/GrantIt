@@ -164,7 +164,7 @@
 						<ul class="address">
 							<li><span>Country:</span>Singapore</li>
 							<li><span>Phone:</span>(+65) 8888 8888</li>
-							<li><span>Email:</span><a href="mailto:grantit@gmail.com">granit@gmail.com</a></li>
+							<li><span>Email:</span><a href="mailto:grantit@gmail.com">grantit@gmail.com</a></li>
 						</ul>
 					</div>
 					</section>
@@ -174,8 +174,6 @@
 						<ul id="icons">
 							<li><a href="#"><img src="images/icon1.jpg" alt="">Facebook</a></li>
 							<li><a href="#"><img src="images/icon2.jpg" alt="">Twitter</a></li>
-							<li><a href="#"><img src="images/icon3.jpg" alt="">LinkedIn</a></li>
-							<li><a href="#"><img src="images/icon4.jpg" alt="">Delicious</a></li>
 						</ul>
 					</div>
 					</section>
@@ -220,19 +218,19 @@
         <h2 class="sign_up">Sign Up!</h2>
 		<div>
 			<div  class="wrapper">
-				<span>Full Name:</span><br>
+				<span>Full Name:</span>
 				<input id="sign_up_full_name" type="text" class="input" >
 			</div>
 			<div  class="wrapper">
-				<span>Email:</span><br>
+				<span>Email:</span>
 				<input id="sign_up_email" type="text" class="input" >
 				</div>
 			<div  class="wrapper">
-				<span>Password:</span><br>
+				<span>Password:</span>
 				<input id="sign_up_password" type="text" class="input" >
 				</div>
 			<div  class="wrapper">
-				<span>Confirm Password:</span><br>
+				<span>Confirm Password:</span>
 				<input id="sign_up_confirm_password" type="text" class="input" >
 			</div>
 			<a href="#" id='sign_up_submit_button'>Sign Up!</a>
@@ -251,11 +249,11 @@
         <h2 class="login">Login!</h2>
 		<div>
 			<div  class="wrapper">
-				<span>Email:</span> <br>
+				<span>Email:</span>
 				<input id="login_email" type="text" class="input" >
 				</div>
 			<div class="wrapper">
-				<span>Password:</span> <br>
+				<span>Password:</span>
 				<input id="login_password" type="text" class="input" >
 			</div>
                <a href="#" id='login_submit_button'>Login</a>
