@@ -247,8 +247,8 @@ footer a:hover{}
 	z-index:1000;
 }
 
-#add_exchange_item_field{
-	display:block;
+#add_exchange_item_field{ /* combined with above once done styling */
+	display:none;
 	position: fixed;
 	left:0px;
 	top:0px;
