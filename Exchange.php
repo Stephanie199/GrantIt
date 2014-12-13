@@ -1,7 +1,29 @@
+<?php
+	require_once('php/connect.php');
+	require_once('php/constants.php');
+	session_start();
+	
+	$loginStatus = $NO_LOGIN;
+	
+	if(isset($_SESSION['email']) && isset($_SESSION['password'])){
+		$result = mysqli_query($SQL, "select * from users where email='$_SESSION[email]' and password='$_SESSION[password]';");
+		if($result -> num_rows === 1){
+			$entry = $result -> fetch_assoc();
+			if($_SESSION['email'] === $entry['email'] && $_SESSION['password'] === $entry['password']){
+				$loginStatus = $LOGIN_SUCCESS;
+			} else{
+				$loginStatus = $LOGIN_FAIL;
+				unset($_SESSION['email']);
+				unset($_SESSION['password']);
+				unset($_SESSION['notify']);
+			}
+		}
+	}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>GrantIt! | Wishes</title>
+<title>GrantIt! | Exchange List</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <link rel="shortcut icon" href="images/favicon.ico" />
@@ -32,6 +54,27 @@
 </head>
 
 <body id="page4">
+
+<script src="script/msg_box.js"></script>
+<script src="script/global_vars.js"></script>
+<script type='text/javascript'>
+// SCRIPTS ADDED BY PHP
+<?php
+	echo "isLogin = false;";
+	if($loginStatus === $LOGIN_FAILED){
+		echo "createAlert('Login attempt failed!');";
+	} else if($loginStatus === $LOGIN_SUCCESS){
+		echo "isLogin = true;";
+		if(isset($_SESSION['notify']) && $_SESSION['notify'] === 1){
+			$_SESSION['notify'] = 0;
+			echo "createNotif('Login success!');";
+		}
+	} else if($loginStatus === $LOGOUT){
+		echo "createNotif('You have successfully logout.');";
+	}
+?>
+</script>
+
 	<div class="body1">
 	<div class="body2">
 	<div class="body5">
@@ -43,9 +86,9 @@
 				<nav>
 					<ul id="menu">
 						<li id="nav1"><a href="index.php">Home<span>Welcome!</span></a></li>
-						<li id="nav4" class="active"><a href="Wishes.html">Wishes<span>Grant It!</span></a></li>
-                        <li id="nav3"><a href="Exchange.html">Exchange<span>List</span></a></li>
-						<li id="nav5"><a href="Contacts.html">Contacts<span>Our Address</span></a></li>
+						<li id="nav4"><a href="Wishes.php">Wishes<span>Grant It!</span></a></li>
+                        <li id="nav3" class="active"><a href="Exchange.php">Exchange<span>List</span></a></li>
+						<li id="nav5"><a href="Contacts.php">Contacts<span>Our Address</span></a></li>
                         <li id="nav2"><a href="#">Profile<span>Me</span></a></li> <!-- After login -->
                         <li id="nav6"><a href="#">Login/Sign Up<span>Become a Member</span></a></li> <!-- Before login -->
 					</ul>
@@ -61,16 +104,16 @@
 		<div class="main zerogrid">
 <!-- content -->
 			<article id="content">
-          	   <!-- Manage Wish Button -->
-                 	<div class="manage_wish">
-                         <a href="#" id="manage_wish_button" class="wish_button">Manage Wish List</a>
+            <!-- Manage Exchange Button -->
+                 	<div class="manage_exchange">
+                         <a href="#" id="manage_exchange_item" class="exchange_button">Manage Exchange List</a>
                     </div>
                     <div class="no-float"> </div>
-               <!-- END of Manage Wish Button -->
-               
-               <!-- Manage Wish Button -->
-                 	<div class="add_wish">
-                         <a href="#" class="add_button">Add Wish List</a>
+            <!-- END of Manage Exchange Button -->
+            
+             <!-- Manage Wish Button -->
+                 	<div class="add_ex">
+                         <a href="#" class="add_button">Add Item for Exchange List</a>
                     </div>
                     <div class="no-float"> </div>
                <!-- END of Manage Wish Button -->
@@ -81,10 +124,10 @@
                 <table >
                     <tr>
                         <td>
-                            No.
+                           No.
                         </td>
                         <td >
-                            Wish Title
+                           Item for Exchange
                         </td>
                         <td>
                             Images
@@ -93,7 +136,7 @@
                             Description
                         </td>
                         <td>
-                            Desired Price (SGD)
+                            Minimum Price (SGD)
                         </td>
                         <td width="25%">
                             
@@ -116,23 +159,21 @@
                             Row 1
                         </td>
                          <td>
-                            <a href ="#" id="wish_table_icon_delete" class="table_icon_delete">Delete</a> 
-                             <a href ="#" id="wish_table_icon_delete" class="table_icon_edit">Edit</a>
+                            <a href ="#" id="exchange_table_icon_delete" class="table_icon_delete">Delete</a> 
+                            <a href ="#" id="exchange_table_icon_edit" class="table_icon_edit">Edit</a>
                         </td>
                     </tr>
                 </table>
             </div>
                
                <!-- END of Manage Wish Menu -->
-               
-               <!-- Wish List Items -->
+            
+            
 				<div class="wrapper">
 					<section class="col-1-3">
 					<div class="wrap-col">
-                     	
 						<div class="wrapper pad_bot2">
-                            
-							<h3><span class="dropcap">1</span>Wish Title 1</h3>
+							<h3><span class="dropcap">1</span>Exchange Title 1</h3>
 							<figure><img src="images/page4_img1.jpg" alt=""></figure>
 							<p class="pad_bot1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
 							<a href="#" class="link1">Read More</a>
@@ -178,8 +219,7 @@
 					</div>
 					</section>
 				</div>
-				<!--END OF Wrapper -->
-                
+
 			</article>
 		</div>
 	</div>
@@ -304,17 +344,12 @@
 	</form>
 </div>
 
-<!--
-<script src='script/constants.js'></script>
-<script src='script/connect.js'></script>
--->
-<script src='script/main.js'></script>
 
 <!-- Exchange Item description field -->
 
-<div id="wish_description_field">
-	<form id="WishDescriptionForm" method="post">
-        <h2 class="login">Wish List Title</h2>
+<div id="exchange_description_field">
+	<form id="ExchangeDescriptionForm" method="post">
+        <h2 class="login">Exchange Title</h2>
 		<div>
         	<div class="wrapper">
 				<div><center><img src="images/page2_img3.jpg" /></center></div><br>
@@ -324,7 +359,7 @@
 				<div class="long_text">adfkajsdfkljadlkfjsadfjajflsajflksajfkjaklfjasjfksadjfajdfkjskfjakdfjklsajflkajfljdkfjkajdfkajfkjaklfdjakdfjkafjklajfklajkljsakfjadklfjksdjfkjdfkljadfkljadklfjadfkajsdfkljadlkfjsadfjajflsajflksajfkjaklfjasjfksadjfajdfkjskfjakdfjklsajflkajfljdkfjkajdfkajfkjaklfdjakdfjkafjklajfklajkljsakfjadklfjksdjfkjdfkljadfkljadklfj adfkajsdfkljadlkfjsadfjajflsajflksajfkjaklfjasjfksadjfajdfkjskfjakdfjklsajflkajfljdkfjkajdfkajfkjaklfdjakdfjkafjklajfklajkljsakfjadklfjksdjfkjdfkljadfkljadklfj  </div><br>
 			</div>
 			<div  class="wrapper">
-				<span><b>Desired Price: </b></span>
+				<span><b>Minimum Price: </b></span>
 				<span>SGD $100 </span>
 			</div>
                <a href="#" class="close_button">Close</a>
@@ -334,5 +369,7 @@
 </div>
 
 
+
+<script src='script/main.js'></script>
 </body>
 </html>

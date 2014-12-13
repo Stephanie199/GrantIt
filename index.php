@@ -110,9 +110,9 @@
 				<nav>
 					<ul id="menu">
 						<li id="nav1" class="active"><a href="index.php">Home<span>Welcome!</span></a></li>
-						<li id="nav4"><a href="Wishes.html">Wishes<span>Grant It!</span></a></li>
-                        <li id="nav3"><a href="Exchange.html">Exchange<span>List</span></a></li>
-						<li id="nav5"><a href="Contacts.html">Contacts<span>Our Address</span></a></li>
+						<li id="nav4"><a href="Wishes.php">Wishes<span>Grant It!</span></a></li>
+                        <li id="nav3"><a href="Exchange.php">Exchange<span>List</span></a></li>
+						<li id="nav5"><a href="Contacts.php">Contacts<span>Our Address</span></a></li>
                         <li id="nav2"><a href="#">Profile<span>Me</span></a></li> <!-- After login -->
                         <li id="nav6"><a href="#">Login/Sign Up<span>Become a Member</span></a></li> <!-- Before login -->
 					</ul>

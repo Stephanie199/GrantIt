@@ -126,6 +126,7 @@ document.addEventListener('DOMContentLoaded', function (arg){
 	logoutBtn.style.fontSize = '9pt';
 	logoutBtn.style.display = 'none';
 	logoutBtn.style.cursor = 'default';
+	logoutBtn.style.fontWeight = 'normal';
 	logoutBtn.textContent = 'Log out';
 	
 	logoutBtn.onmouseenter = function (arg){

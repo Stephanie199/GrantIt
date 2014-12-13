@@ -1,3 +1,25 @@
+<?php
+	require_once('php/connect.php');
+	require_once('php/constants.php');
+	session_start();
+	
+	$loginStatus = $NO_LOGIN;
+	
+	if(isset($_SESSION['email']) && isset($_SESSION['password'])){
+		$result = mysqli_query($SQL, "select * from users where email='$_SESSION[email]' and password='$_SESSION[password]';");
+		if($result -> num_rows === 1){
+			$entry = $result -> fetch_assoc();
+			if($_SESSION['email'] === $entry['email'] && $_SESSION['password'] === $entry['password']){
+				$loginStatus = $LOGIN_SUCCESS;
+			} else{
+				$loginStatus = $LOGIN_FAIL;
+				unset($_SESSION['email']);
+				unset($_SESSION['password']);
+				unset($_SESSION['notify']);
+			}
+		}
+	}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,6 +52,27 @@
 <![endif]-->
 </head>
 <body id="page5">
+
+<script src="script/msg_box.js"></script>
+<script src="script/global_vars.js"></script>
+<script type='text/javascript'>
+// SCRIPTS ADDED BY PHP
+<?php
+	echo "isLogin = false;";
+	if($loginStatus === $LOGIN_FAILED){
+		echo "createAlert('Login attempt failed!');";
+	} else if($loginStatus === $LOGIN_SUCCESS){
+		echo "isLogin = true;";
+		if(isset($_SESSION['notify']) && $_SESSION['notify'] === 1){
+			$_SESSION['notify'] = 0;
+			echo "createNotif('Login success!');";
+		}
+	} else if($loginStatus === $LOGOUT){
+		echo "createNotif('You have successfully logout.');";
+	}
+?>
+</script>
+
 	<div class="body1">
 	<div class="body2">
 	<div class="body5">
@@ -41,9 +84,9 @@
 				<nav>
 					<ul id="menu">
 						<li id="nav1"><a href="index.php">Home<span>Welcome!</span></a></li>
-						<li id="nav4"><a href="Wishes.html">Wishes<span>Grant It!</span></a></li>
-                        <li id="nav3"><a href="Exchange.html">Exchange<span>List</span></a></li>
-						<li id="nav5" class="active"><a href="Contacts.html">Contacts<span>Our Address</span></a></li>
+						<li id="nav4"><a href="Wishes.php">Wishes<span>Grant It!</span></a></li>
+                        <li id="nav3"><a href="Exchange.php">Exchange<span>List</span></a></li>
+						<li id="nav5" class="active"><a href="Contacts.php">Contacts<span>Our Address</span></a></li>
                         <li id="nav2"><a href="#">Profile<span>Me</span></a></li> <!-- After login -->
                         <li id="nav6"><a href="#">Login/Sign Up<span>Become a Member</span></a></li> <!-- Before login -->
 					</ul>

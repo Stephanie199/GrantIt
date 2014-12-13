@@ -1,3 +1,25 @@
+<?php
+	require_once('php/connect.php');
+	require_once('php/constants.php');
+	session_start();
+	
+	$loginStatus = $NO_LOGIN;
+	
+	if(isset($_SESSION['email']) && isset($_SESSION['password'])){
+		$result = mysqli_query($SQL, "select * from users where email='$_SESSION[email]' and password='$_SESSION[password]';");
+		if($result -> num_rows === 1){
+			$entry = $result -> fetch_assoc();
+			if($_SESSION['email'] === $entry['email'] && $_SESSION['password'] === $entry['password']){
+				$loginStatus = $LOGIN_SUCCESS;
+			} else{
+				$loginStatus = $LOGIN_FAIL;
+				unset($_SESSION['email']);
+				unset($_SESSION['password']);
+				unset($_SESSION['notify']);
+			}
+		}
+	}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,6 +53,27 @@
 </head>
 
 <body id="page2">
+
+<script src="script/msg_box.js"></script>
+<script src="script/global_vars.js"></script>
+<script type='text/javascript'>
+// SCRIPTS ADDED BY PHP
+<?php
+	echo "isLogin = false;";
+	if($loginStatus === $LOGIN_FAILED){
+		echo "createAlert('Login attempt failed!');";
+	} else if($loginStatus === $LOGIN_SUCCESS){
+		echo "isLogin = true;";
+		if(isset($_SESSION['notify']) && $_SESSION['notify'] === 1){
+			$_SESSION['notify'] = 0;
+			echo "createNotif('Login success!');";
+		}
+	} else if($loginStatus === $LOGOUT){
+		echo "createNotif('You have successfully logout.');";
+	}
+?>
+</script>
+
 	<div class="body1">
 	<div class="body2">
 	<div class="body5">
@@ -38,14 +81,14 @@
 <!-- header -->
 			<header>
 				<div class="wrapper rơw">
-				<h1><a href="index.html" id="logo"><img src="images/logo.png" /></a></h1>
+				<h1><a href="index.php" id="logo"><img src="images/logo.png" /></a></h1>
 				<nav>
 					<ul id="menu">
-						<li id="nav1"><a href="index.html">Home<span>Welcome!</span></a></li>
-						<li id="nav2" class="active"><a href="News.html">News<span>Fresh</span></a></li>
-						<li id="nav3"><a href="Services.html">Services<span>for you</span></a></li>
-						<li id="nav4"><a href="Products.html">Products<span>The best</span></a></li>
-						<li id="nav5"><a href="Contacts.html">Contacts<span>Our Address</span></a></li>
+						<li id="nav1"><a href="index.php">Home<span>Welcome!</span></a></li>
+						<li id="nav2" class="active"><a href="News.php">News<span>Fresh</span></a></li>
+						<li id="nav3"><a href="Services.php">Services<span>for you</span></a></li>
+						<li id="nav4"><a href="Products.php">Products<span>The best</span></a></li>
+						<li id="nav5"><a href="Contacts.php">Contacts<span>Our Address</span></a></li>
 					</ul>
 				</nav>
 				</div>
@@ -264,5 +307,6 @@
 		tabs.init();
 	})
 </script>
+<script src='script/main.js'></script>
 </body>
 </html>
