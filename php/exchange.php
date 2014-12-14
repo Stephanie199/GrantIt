@@ -15,5 +15,5 @@
 	echo $itemName.' '.$imageUrl.' '.$itemDesc.' '.$minPrice;
 	mysqli_query($SQL, "insert into exchange (uid, item_name, image_url, item_desc, min_price) values ($uid, '$itemName', '$imageUrl', '$itemDesc', $minPrice);");
 	echo "insert into exchange (uid, item_name, image_url, item_desc, min_price) values ($uid, '$itemName', '$imageUrl', '$itemDesc', $minPrice);";
-	header('Location: ..');
+	header('Location: ../Exchange.php');
 ?>
