@@ -389,6 +389,15 @@
 				<span><b>Minimum Price: </b></span>
 				<span>SGD $100 </span>
 			</div>
+            <div  class="wrapper">
+				<span><b>Other Wishes posted by Jay-Z: <a href="#">Jay-Z</a>: </b></span>
+				<img src="images/dummy_images/img5_mini_penguin_speaker.jpg" width="100px" height="100px">
+			</div>
+            <div  class="wrapper">
+				<span><b>Items for Exchange posted by <a href="#">Jay-Z</a>: </b></span>
+				<img src="images/dummy_images/img3_phone_charger.jpg" width="100px" height="100px">
+                <img src="images/dummy_images/img1_harry_potter_books.jpg" width="100px" height="100px">
+			</div>
                <a href="#" id='exchange_desc_close_button' class="close_button">Close</a>
            <div class="no-float"> </div>
 		</div>
