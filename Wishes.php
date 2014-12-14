@@ -441,7 +441,7 @@
 				<span>Description:</span><br>
 				<textarea id="add_wish_description"> </textarea>
 			</div>
-			<a href="#" id='add_wish_submit_button'>Sign Up!</a>
+			<a href="#" id='add_wish_submit_button'>Add Wish</a>
 			<a href="#" id='add_wish_close_button'>Close</a>
 			<div class="no-float"> </div>   
 		</div>
