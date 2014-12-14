@@ -194,24 +194,24 @@ where people can exchange the desired items with their own items (either first-h
 							  <ul>
 								<li>
 									<div>
-										“Nam libero tempore, cum soluta nobis eligendi quo minus quod maxime placeat facere.”
+										“Best experience for shopping.”
 									</div>
-									<span><strong class="color1">James Coloway,</strong> <br>
-									Director</span>
+									<span><strong class="color1">Andy Lau,</strong> <br>
+									Granter</span>
 								</li>
 								<li>
 									<div>
-										“Nam libero tempore, cum soluta nobis eligendi quo minus quod maxime placeat facere.”
+										“Please make my wish come true! Save my wallet!.”
 									</div>
-									<span><strong class="color1">James Coloway,</strong> <br>
-									Director</span>
+									<span><strong class="color1">James Cook,</strong> <br>
+									Wisher</span>
 								</li>
 								<li>
 									<div>
-										“Nam libero tempore, cum soluta nobis eligendi quo minus quod maxime placeat facere.”
+										“I love green. Allows me to exchange stuff.”
 									</div>
-									<span><strong class="color1">James Coloway,</strong> <br>
-									Director</span>
+									<span><strong class="color1">Barnie Armstrong,</strong> <br>
+									Wisher</span>
 								</li>
 							  </ul>
 							</div>
@@ -245,7 +245,7 @@ where people can exchange the desired items with their own items (either first-h
 						<ul class="address">
 							<li><span>Country:</span>Singapore</li>
 							<li><span>Phone:</span>(+65) 8888 8888</li>
-							<li><span>Email:</span><a href="mailto:grantit@gmail.com">granit@gmail.com</a></li>
+							<li><span>Email:</span><a href="mailto:grantit@gmail.com">grantit@gmail.com</a></li>
 						</ul>
 					</div>
 					</section>

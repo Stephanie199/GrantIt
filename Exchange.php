@@ -176,15 +176,15 @@
 					<section class="col-1-3">
 					<div class="wrap-col">
 						<div class="wrapper pad_bot2">
-							<h3><span class="dropcap">1</span>Exchange Title 1</h3>
-							<figure><img src="images/page4_img1.jpg" alt=""></figure>
-							<p class="pad_bot1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+							<h3><span class="dropcap">1</span>Harry Potter Series</h3>
+							<figure><img src="images/dummy_images/img1_harry_potter_books.jpg" alt=""></figure>
+							<p class="pad_bot1">Posted by <b><a href="#"> Hermionie Granger</a></b><br> Date posted 12/12/2014</p>
 							<a href="#" class="link1">Read More</a>
 						</div>
 						<div class="wrapper">
-							<h3><span class="dropcap">4</span>Product name</h3>
-							<figure><img src="images/page4_img2.jpg" alt=""></figure>
-							<p class="pad_bot1">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia dese- runt mollit anim id est laborum.</p>
+							<h3><span class="dropcap">4</span>Cool Wireless Charger</h3>
+							<figure><img src="images/dummy_images/img3_phone_charger.jpg" alt=""></figure>
+							<p class="pad_bot1">Posted by <b><a href="#"> Steve Jobs</a></b><br> Date posted 11/11/2014</p>
 							<a href="#" class="link1">Read More</a>
 						</div>
 					</div>
@@ -192,15 +192,15 @@
 					<section class="col-1-3">
 					<div class="wrap-col">
 						<div class="wrapper pad_bot2">
-							<h3><span class="dropcap">2</span>Product name</h3>
-							<figure><img src="images/page4_img3.jpg" alt=""></figure>
-							<p class="pad_bot1">Dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip exea.</p>
+							<h3><span class="dropcap">2</span>Bluetooth Keyboard</h3>
+							<figure><img src="images/dummy_images/img4_bluetooth_keyboard.jpg" alt=""></figure>
+							<p class="pad_bot1">Posted by <b><a href="#"> Bill Gates</a></b><br> Date posted 9/11/2014</p>
 							<a href="#" class="link1">Read More</a>
 						</div>
 						<div class="wrapper">
-							<h3><span class="dropcap">5</span>Product name</h3>
-							<figure><img src="images/page4_img4.jpg" alt=""></figure>
-							<p class="pad_bot1">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+							<h3><span class="dropcap">5</span> Woman Biker Jacket</h3>
+							<figure><img src="images/dummy_images/img8_woman_biker_jacket.jpg" alt=""></figure>
+							<p class="pad_bot1">Posted by <b><a href="#"> Beyonce </a></b><br> Date posted 04/11/2014</p>
 							<a href="#" class="link1">Read More</a>
 						</div>
 					</div>
@@ -209,14 +209,8 @@
 					<div class="wrap-col">
 						<div class="wrapper pad_bot2">
 							<h3><span class="dropcap">3</span>Product name</h3>
-							<figure><img src="images/page4_img5.jpg" alt=""></figure>
-							<p class="pad_bot1">Commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
-							<a href="#" class="link1">Read More</a>
-						</div>
-						<div class="wrapper">
-							<h3><span class="dropcap">6</span>Product name</h3>
-							<figure><img src="images/page4_img6.jpg" alt=""></figure>
-							<p class="pad_bot1">Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+							<figure><img src="images/dummy_images/img10_geometry_textbook.jpg" alt=""></figure>
+							<p class="pad_bot1">Posted by <b><a href="#"> Albert Einstein </a></b><br> Date posted 07/11/2014</p>
 							<a href="#" class="link1">Read More</a>
 						</div>
 					</div>
@@ -393,7 +387,7 @@
 				<span>Description:</span><br>
 				<textarea id="add_exchange_item_description"> </textarea>
 				</div>
-			<a href="#" id='add_exchange_item_submit_button'>Sign Up!</a>
+			<a href="#" id='add_exchange_item_submit_button'>Add Item</a>
 			<a href="#" id='add_exchange_item_close_button'>Close</a>
             <div class="no-float"> </div>   
 		</div>
