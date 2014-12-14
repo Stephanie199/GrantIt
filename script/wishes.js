@@ -5,14 +5,24 @@ document.addEventListener('DOMContentLoaded', function (arg){
 	var addWishForm = document.getElementById('AddWishForm');
 	var addWishSubmitBtn = document.getElementById('add_wish_submit_button');
 	var addWishCloseBtn = document.getElementById('add_wish_close_button');
+	var manageWishBtn = document.getElementById('manage_wish_button');
 	
 	var addWishTitleField = document.getElementById('add_wish_title');
 	var addWishImageUrlField = document.getElementById('add_wish_image_link');
 	var addWishPriceField = document.getElementById('add_wish_price');
 	var addWishDescField = document.getElementById('add_wish_description');
 	
-	// MANAGE WISH BUTTONS, FORM. AND FIELDS
-	var manageWishBtn = document.getElementById('manage_wish_button');
+	// WISH TABLE
+	var wishTable = document.getElementById('wish_table');
+	
+	wishTable.parentNode.style.display = 'none';
+	addWishBtn.parentNode.style.display = 'none';
+	manageWishBtn.parentNode.style.display = 'none';
+	
+	manageWishBtn.onclick = function (arg){
+		wishTable.parentNode.style.display = 'initial';
+		addWishBtn.parentNode.style.display = 'initial';
+	};
 	
 	addWishField.style.display = 'none';
 	addWishField.onclick = function (arg){
@@ -52,15 +62,7 @@ document.addEventListener('DOMContentLoaded', function (arg){
 		}
 	};
 	
-	var wishTable = document.getElementById('wish_table');
-	
-	if(!isLogin){
-		wishTable.parentNode.style.display = 'none';
-		addWishBtn.parentNode.style.display = 'none';
-		manageWishBtn.parentNode.style.display = 'none';
-	} else{
-		wishTable.parentNode.style.display = 'block';
-		addWishBtn.parentNode.style.display = 'block';
-		manageWishBtn.parentNode.style.display = 'block';
+	if(isLogin){
+		manageWishBtn.parentNode.style.display = 'initial';
 	}
 });

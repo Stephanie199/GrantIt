@@ -6,11 +6,20 @@ document.addEventListener('DOMContentLoaded', function (arg){
 	var addExchangeItemCloseBtn = document.getElementById('add_exchange_item_close_button');
 	var addExchangeItemBtn = document.getElementById('add_button');
 	var manageExchangeItemBtn = document.getElementById('manage_exchange_item');
+	var exchangeTable = document.getElementById('exchange_table');
 	
 	var itemNameField = document.getElementById('add_exchange_item_name');
 	var imageUrlField = document.getElementById('add_exchange_item_image_link');
 	var minPriceField = document.getElementById('add_exchange_item_price');
 	var descField = document.getElementById('add_exchange_item_description');
+	
+	addExchangeItemBtn.parentNode.style.display = 'none';
+	exchangeTable.parentNode.style.display = 'none';
+	
+	manageExchangeItemBtn.onclick = function (arg){
+		addExchangeItemBtn.parentNode.style.display = 'initial';
+		exchangeTable.parentNode.style.display = 'initial';
+	};
 	
 	addExchangeItemBtn.onclick = function (arg){
 		addExchangeItemField.style.display = 'block';
@@ -51,4 +60,9 @@ document.addEventListener('DOMContentLoaded', function (arg){
 	};
 	
 	addExchangeItemField.style.display = 'none';
+	manageExchangeItemBtn.parentNode.style.display = 'none';
+	
+	if(isLogin){
+		manageExchangeItemBtn.parentNode.style.display = 'initial';
+	}
 });

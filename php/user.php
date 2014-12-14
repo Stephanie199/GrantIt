@@ -33,4 +33,14 @@
 			on wishes.uid=users.uid and users.uid=$user[uid];");
 		return $result;
 	}
+	
+	function genExchange(){
+		global $SQL;
+		$user = getRow();
+		$result = mysqli_query($SQL,
+			"select * from users
+			inner join exchange
+			on exchange.uid=users.uid and users.uid=$user[uid];");
+		return $result;
+	}
 ?>

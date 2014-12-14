@@ -1,6 +1,7 @@
 <?php
 	require_once('php/connect.php');
 	require_once('php/constants.php');
+	require_once('php/user.php');
 	if(!isset($_SESSION)){
 		session_start();
 	}
@@ -129,9 +130,9 @@
 					<td>
 						No.
 					</td>
-					<td >
-						Item for Exchange
 					<td>
+						Item for Exchange
+					</td>
 					<td>
 						Images
 					</td>
@@ -145,6 +146,26 @@
 						
 					</td>
 				</tr>
+				<?php
+					if($loginStatus === $LOGIN_SUCCESS){
+						$exchange = genExchange();
+						while($row = $exchange -> fetch_assoc()){
+							echo "<tr>";
+							echo "<td>$row[eid]</td>";
+							echo "<td>$row[item_name]</td>";
+							echo "<td>$row[image_url]</td>";
+							echo "<td>$row[item_desc]</td>";
+							echo "<td>$row[min_price]</td>";
+							echo 
+								"<td>
+									<a href ='#' id='exchange_table_icon_delete' class='table_icon_delete'>Delete</a>
+									<a href ='#' id='exchange_table_icon_edit' class='table_icon_edit'>Edit</a>
+								</td>";
+							echo "</tr>";
+						}
+					}
+				?>
+				<!--
                     <tr>
 					<td >
 						Row 1
@@ -166,6 +187,7 @@
 						<a href ="#" id="exchange_table_icon_edit" class="table_icon_edit">Edit</a>
 					</td>
                     </tr>
+				-->
                 </table>
             </div>
                
