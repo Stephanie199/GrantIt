@@ -381,18 +381,18 @@
 	<form id="WishDescriptionForm" method="post">
         <h2 class="wish_title">Beats Headphone</h2>
 		<div>
-        	<div class="wrapper">
+			<div class="wrapper">
 				<div><center><img src="images/dummy_images/img6_beats_headphones.jpg" /></center></div><br>
 			</div>
-            <div class="wrapper">
+			<div class="wrapper">
 				<span><b>Posted By: </b></span>
 				<span><b><a href="#">Jay-Z</a></b></span><br>
 			</div>
-             <div class="wrapper">
+			<div class="wrapper">
 				<span><b>Date Posted: </b></span>
 				<span>07/12/2014</span><br>
 			</div>
-       	 	<div class="wrapper">
+			<div class="wrapper">
 				<span><b>Description: </b></span>
 				<div class="long_text"><br>Clearer sound. Deeper bass. Beats Solo HD headphones are the only Beats by Dr. Dre that come with not one, but two speakers inside each can. That means you get crystal clear highs and deep, rumbling lows in high definition Every pair is now constructed of super-durable, flexible material, reinforced with a metal strip to make sure it never comes apart Built-In mic for calls. Switch easily between songs and incoming calls. No need to take off your headphones or talk into the phone like a walkie-talkie Remote control. Take calls, skip songs and adjust volume right from the cord of your Beats Solo HD headphones. No more searching for your phone or music player just to find the right song</div><br>
 			</div>
@@ -400,23 +400,24 @@
 				<span><b>Desired Price: </b></span>
 				<span>SGD $50 </span>
 			</div>
-            <div  class="wrapper">
+			<div  class="wrapper">
 				<span><b>Other Wishes posted by <a href="#">Jay-Z</a>: </b></span>
 				<img src="images/dummy_images/img5_mini_penguin_speaker.jpg" width="100px" height="100px">
 			</div>
-            <div  class="wrapper">
+			<div  class="wrapper">
 				<span><b>Items for Exchange posted by <a href="#">Jay-Z</a>: </b></span>
 				<img src="images/dummy_images/img3_phone_charger.jpg" width="100px" height="100px">
-                <img src="images/dummy_images/img1_harry_potter_books.jpg" width="100px" height="100px">
+				<img src="images/dummy_images/img1_harry_potter_books.jpg" width="100px" height="100px">
 			</div>
-            <div  class="wrapper">
+			<div  class="wrapper">
 				<h3 class="wish_comments">Comments:</h3>
-                <hr>
+				 <hr>
 				<textarea class="add_wish_comment" placeholder="Type your comment here..."> </textarea>
 			</div>
-               <a href="#" id='wish_desc_close_button' class="close_button">Close</a>
-               <a href="#" class="grantit_button">GrantIt!</a>
-           <div class="no-float"> </div>
+			<a href="#" id='wish_desc_close_button' class="close_button">Close</a>
+			<a href="#" class="grantit_button">GrantIt!</a>
+			<div class="no-float"> </div>
+			<br />
 		</div>
 	</form>
 </div>
@@ -445,7 +446,8 @@
 			</div>
 			<a href="#" id='add_wish_submit_button'>Add Wish</a>
 			<a href="#" id='add_wish_close_button'>Close</a>
-			<div class="no-float"> </div>   
+			<div class="no-float"> </div>
+			<br />
 		</div>
 	</form>
 </div>

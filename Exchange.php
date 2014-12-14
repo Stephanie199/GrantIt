@@ -372,18 +372,18 @@
 	<form id="ExchangeDescriptionForm" method="post">
         <h2 class="login">Harry Potter Series</h2>
 		<div>
-        	<div class="wrapper">
+			<div class="wrapper">
 				<div><center><img src="images/dummy_images/img1_harry_potter_books.jpg" /></center></div><br>
 			</div>
-            <div class="wrapper">
+			<div class="wrapper">
 				<span><b>Posted By: </b></span>
 				<span><b><a href="#">Hermionie Granger</a></b></span><br>
 			</div>
-             <div class="wrapper">
+			<div class="wrapper">
 				<span><b>Date Posted: </b></span>
 				<span>12/12/2014</span><br>
 			</div>
-       	 	<div class="wrapper">
+			<div class="wrapper">
 				<span><b>Description: </b></span>
 				<div class="long_text">Now for the first time ever, J.K. Rowling’s seven bestselling Harry Potter books are available in a stunning paperback boxed set! The Harry Potter series has been hailed as “one for the ages” by Stephen King and “a spellbinding saga’ by USA Today. And most recently, The New York Times called Harry Potter and the Deathly Hallows the “fastest selling book in history.” This is the ultimate Harry Potter collection for Harry Potter fans of all ages!</div><br>
 			</div>
@@ -391,16 +391,17 @@
 				<span><b>Minimum Price: </b></span>
 				<span>SGD $100 </span>
 			</div>
-            <div  class="wrapper">
+			<div  class="wrapper">
 				<span><b>Other Wishes posted by <a href="#">Hermionie Granger</a>: </b></span>
 				<img src="images/dummy_images/img2_twilight_books.jpg" width="100px" height="100px">
 			</div>
-            <div  class="wrapper">
+			<div  class="wrapper">
 				<span><b>Items for Exchange posted by <a href="#">Hermionie Granger</a>: </b></span>
 				<img src="images/dummy_images/img7_hoodie_jacket.jpg" width="100px" height="100px">
 			</div>
-               <a href="#" id='exchange_desc_close_button' class="close_button">Close</a>
-           <div class="no-float"> </div>
+			<a href="#" id='exchange_desc_close_button' class="close_button">Close</a>
+			<div class="no-float"> </div>
+			<br />
 		</div>
 	</form>
 </div>
@@ -415,7 +416,7 @@
 				<span>Exchange Item name:</span>
 				<input id="add_exchange_item_name" type="text" class="input" >
 			</div>
-            <div class="wrapper">
+			<div class="wrapper">
 				<span>Image Link:</span>
 				<input id="add_exchange_item_image_link" type="text" class="input" >
 			</div>
@@ -426,10 +427,11 @@
 			<div  class="wrapper">
 				<span>Description:</span><br>
 				<textarea id="add_exchange_item_description"> </textarea>
-				</div>
+			</div>
 			<a href="#" id='add_exchange_item_submit_button'>Add Item</a>
 			<a href="#" id='add_exchange_item_close_button'>Close</a>
-            <div class="no-float"> </div>   
+			<div class="no-float"> </div>
+			<br />
 		</div>
 	</form>
 </div>
