@@ -199,6 +199,23 @@
 					<div class="wrap-col">
                      	
 						<div class="wrapper pad_bot2">
+                            
+							<h3><span class="dropcap">1</span>Beats Headphones</h3>
+							<figure><img src="images/dummy_images/img6_beats_headphones.jpg" alt=""></figure>
+							<p class="pad_bot1">Posted by <b><a href="#"> Jay-Z</a></b><br> Date posted 07/12/2014</p>
+							<a href="#" class="link1">Read More</a>
+						</div>
+						<div class="wrapper">
+							<h3><span class="dropcap">4</span>OneOfAKind Hoodie</h3>
+							<figure><img src="images/dummy_images/img9_one_of_a_kind_hoodie.jpg" alt=""></figure>
+							<p class="pad_bot1">Posted by <b><a href="#"> G-Dragon</a></b><br> Date posted 11/11/2014</p>
+							<a href="#" class="link1">Read More</a>
+						</div>
+					</div>
+					</section>
+					<section class="col-1-3">
+					<div class="wrap-col">
+						<div class="wrapper pad_bot2">
 							<h3><span class="dropcap">2</span>Java Textbook</h3>
 							<figure><img src="images/dummy_images/img11_java_textbook.jpg" alt=""></figure>
 							<p class="pad_bot1">Posted by <b><a href="#"> Mark Zuckerberg</a></b><br> Date posted 03/12/2014</p>
@@ -210,6 +227,17 @@
 							<p class="pad_bot1">Posted by <b><a href="#"> Edward Cullen</a></b><br> Date posted 01/11/2014</p>
 							<a href="#" class="link1">Read More</a>
 						</div>
+					</div>
+					</section>
+					<section class="col-1-3">
+					<div class="wrap-col">
+						<div class="wrapper pad_bot2">
+							<h3><span class="dropcap">3</span>Mini Penguin Speaker</h3>
+							<figure><img src="images/dummy_images/img5_mini_penguin_speaker.jpg" alt=""></figure>
+							<p class="pad_bot1">Posted by <b><a href="#"> Minion</a></b><br> Date posted 02/12/2014</p>
+							<a href="#" class="link1">Read More</a>
+						</div>
+					
 					</div>
 					</section>
 				</div>
