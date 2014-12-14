@@ -373,22 +373,22 @@
 -->
 <script src='script/main.js'></script>
 
-<!-- Exchange Item description field / Read more form -->
+<!-- Wish Item description field / Read more form -->
 
 <div id="wish_description_field">
 	<form id="WishDescriptionForm" method="post">
-        <h2 class="wish_title">Wish List Title</h2>
+        <h2 class="wish_title">Beats Headphone</h2>
 		<div>
         	<div class="wrapper">
-				<div><center><img src="images/page2_img3.jpg" /></center></div><br>
+				<div><center><img src="images/dummy_images/img6_beats_headphones.jpg" /></center></div><br>
 			</div>
        	 	<div class="wrapper">
 				<span><b>Description: </b></span>
-				<div class="long_text">adfkajsdfkljadlkfjsadfjajflsajflksajfkjaklfjasjfksadjfajdfkjskfjakdfjklsajflkajfljdkfjkajdfkajfkjaklfdjakdfjkafjklajfklajkljsakfjadklfjksdjfkjdfkljadfkljadklfjadfkajsdfkljadlkfjsadfjajflsajflksajfkjaklfjasjfksadjfajdfkjskfjakdfjklsajflkajfljdkfjkajdfkajfkjaklfdjakdfjkafjklajfklajkljsakfjadklfjksdjfkjdfkljadfkljadklfj adfkajsdfkljadlkfjsadfjajflsajflksajfkjaklfjasjfksadjfajdfkjskfjakdfjklsajflkajfljdkfjkajdfkajfkjaklfdjakdfjkafjklajfklajkljsakfjadklfjksdjfkjdfkljadfkljadklfj  </div><br>
+				<div class="long_text">Clearer sound. Deeper bass. Beats Solo HD headphones are the only Beats by Dr. Dre that come with not one, but two speakers inside each can. That means you get crystal clear highs and deep, rumbling lows in high definition Every pair is now constructed of super-durable, flexible material, reinforced with a metal strip to make sure it never comes apart Built-In mic for calls. Switch easily between songs and incoming calls. No need to take off your headphones or talk into the phone like a walkie-talkie Remote control. Take calls, skip songs and adjust volume right from the cord of your Beats Solo HD headphones. No more searching for your phone or music player just to find the right song</div><br>
 			</div>
 			<div  class="wrapper">
 				<span><b>Desired Price: </b></span>
-				<span>SGD $100 </span>
+				<span>SGD $50 </span>
 			</div>
                <a href="#" id='wish_desc_close_button' class="close_button">Close</a>
                <a href="#" class="grantit_button">GrantIt!</a>

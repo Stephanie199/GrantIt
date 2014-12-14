@@ -368,14 +368,22 @@
 
 <div id="exchange_description_field">
 	<form id="ExchangeDescriptionForm" method="post">
-        <h2 class="login">Exchange Title</h2>
+        <h2 class="login">Harry Potter Series</h2>
 		<div>
         	<div class="wrapper">
-				<div><center><img src="images/page2_img3.jpg" /></center></div><br>
+				<div><center><img src="images/dummy_images/img1_harry_potter_books.jpg" /></center></div><br>
+			</div>
+            <div class="wrapper">
+				<span><b>Posted By: </b></span>
+				<span><b><a href="#">Hermionie Granger</a></b></span><br>
+			</div>
+             <div class="wrapper">
+				<span><b>Date Posted: </b></span>
+				<span>12/12/2014</span><br>
 			</div>
        	 	<div class="wrapper">
 				<span><b>Description: </b></span>
-				<div class="long_text">adfkajsdfkljadlkfjsadfjajflsajflksajfkjaklfjasjfksadjfajdfkjskfjakdfjklsajflkajfljdkfjkajdfkajfkjaklfdjakdfjkafjklajfklajkljsakfjadklfjksdjfkjdfkljadfkljadklfjadfkajsdfkljadlkfjsadfjajflsajflksajfkjaklfjasjfksadjfajdfkjskfjakdfjklsajflkajfljdkfjkajdfkajfkjaklfdjakdfjkafjklajfklajkljsakfjadklfjksdjfkjdfkljadfkljadklfj adfkajsdfkljadlkfjsadfjajflsajflksajfkjaklfjasjfksadjfajdfkjskfjakdfjklsajflkajfljdkfjkajdfkajfkjaklfdjakdfjkafjklajfklajkljsakfjadklfjksdjfkjdfkljadfkljadklfj  </div><br>
+				<div class="long_text">Now for the first time ever, J.K. Rowling’s seven bestselling Harry Potter books are available in a stunning paperback boxed set! The Harry Potter series has been hailed as “one for the ages” by Stephen King and “a spellbinding saga’ by USA Today. And most recently, The New York Times called Harry Potter and the Deathly Hallows the “fastest selling book in history.” This is the ultimate Harry Potter collection for Harry Potter fans of all ages!</div><br>
 			</div>
 			<div  class="wrapper">
 				<span><b>Minimum Price: </b></span>
