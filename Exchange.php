@@ -153,7 +153,7 @@
 							echo "<tr>";
 							echo "<td>$row[eid]</td>";
 							echo "<td>$row[item_name]</td>";
-							echo "<td>$row[image_url]</td>";
+							echo "<td><img src='$row[image_url]' alt='$row[item_name]' title='$row[item_name]' /></td>";
 							echo "<td>$row[item_desc]</td>";
 							echo "<td>$row[min_price]</td>";
 							echo 
@@ -381,7 +381,7 @@
 				<span><b>Minimum Price: </b></span>
 				<span>SGD $100 </span>
 			</div>
-               <a href="#" class="close_button">Close</a>
+               <a href="#" id='exchange_desc_close_button' class="close_button">Close</a>
            <div class="no-float"> </div>
 		</div>
 	</form>

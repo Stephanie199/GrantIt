@@ -153,7 +153,7 @@
 							echo "<tr>";
 							echo "<td>$row[wid]</td>";
 							echo "<td>$row[title]</td>";
-							echo "<td>$row[image_url]</td>";
+							echo "<td><img src='$row[image_url]' alt='$row[title]' title='$row[title]' width='100px' height='100px' /></td>";
 							echo "<td>$row[desc]</td>";
 							echo "<td>$row[price]</td>";
 							echo 
@@ -390,7 +390,7 @@
 				<span><b>Desired Price: </b></span>
 				<span>SGD $100 </span>
 			</div>
-               <a href="#" class="close_button">Close</a>
+               <a href="#" id='wish_desc_close_button' class="close_button">Close</a>
                <a href="#" class="grantit_button">GrantIt!</a>
            <div class="no-float"> </div>
 		</div>

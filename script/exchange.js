@@ -65,4 +65,28 @@ document.addEventListener('DOMContentLoaded', function (arg){
 	if(isLogin){
 		manageExchangeItemBtn.parentNode.style.display = 'initial';
 	}
+	
+	var exchangeDescField = document.getElementById('exchange_description_field');
+	var exchangeDescForm = document.getElementById('ExchangeDescriptionForm');
+	var exchangeDescCloseBtn = document.getElementById('exchange_desc_close_button');
+	
+	exchangeDescField.onclick = function (arg){
+		this.style.display = 'none';
+	};
+	
+	exchangeDescForm.onclick = function (arg){
+		arg.stopPropagation();
+	};
+	
+	exchangeDescCloseBtn.onclick = function (arg){
+		exchangeDescField.style.display = 'none';
+	};
+	
+	var readMoreBtns = document.getElementsByClassName('link1');
+	for(var i = 0, size = readMoreBtns.length; i < size; ++i){
+		var button = readMoreBtns[i];
+		button.onclick = function (arg){
+			exchangeDescField.style.display = 'block';
+		};
+	}
 });

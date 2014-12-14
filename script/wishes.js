@@ -66,29 +66,30 @@ document.addEventListener('DOMContentLoaded', function (arg){
 		manageWishBtn.parentNode.style.display = 'initial';
 	}
 	
-	/*
-	var deleteBtns = document.getElementsByClassName('table_icon_delete');
+	var wishDescriptionField = document.getElementById('wish_description_field');
+	var wishDescriptionForm = document.getElementById('WishDescriptionForm');
+	var wishDescriptionCloseBtn = document.getElementById('wish_desc_close_button');
 	
-	for(var i = 0, size = deleteBtns.length; i < size; ++i){
-		var button = deleteBtns[i];
+	wishDescriptionField.style.display = 'none';
+	
+	wishDescriptionForm.onclick = function (arg){
+		arg.stopPropagation();
+	};
+	
+	wishDescriptionCloseBtn.onclick = function (arg){
+		wishDescriptionField.style.display = 'none';
+	};
+	
+	wishDescriptionField.onclick = function (arg){
+		this.style.display = 'none';
+	};
+	
+	var readMoreBtns = document.getElementsByClassName('link1');
+	for(var i = 0, size = readMoreBtns.length; i < size; ++i){
+		var button = readMoreBtns[i];
 		
 		button.onclick = function (arg){
-			var row = this.parentNode.parentNode;
-			var wid = row.cells[0].textContent;
-			
-			var form = document.createElement('form');
-			form.method = 'post';
-			form.target = '_self';
-			form.action = 'php/del_wish.php';
-			
-			var input = document.createElement('input');
-			input.type = 'hidden';
-			input.value = wid;
-			input.name = 'wid';
-			
-			form.appendChild(input);
-			form.submit();
-		};
+			wishDescriptionField.style.display = 'block';
+		}
 	}
-	*/
 });
