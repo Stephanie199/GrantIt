@@ -399,7 +399,7 @@
 				<span>SGD $50 </span>
 			</div>
             <div  class="wrapper">
-				<span><b>Other Wishes posted by Jay-Z: <a href="#">Jay-Z</a>: </b></span>
+				<span><b>Other Wishes posted by <a href="#">Jay-Z</a>: </b></span>
 				<img src="images/dummy_images/img5_mini_penguin_speaker.jpg" width="100px" height="100px">
 			</div>
             <div  class="wrapper">
@@ -410,7 +410,7 @@
             <div  class="wrapper">
 				<h3 class="wish_comments">Comments:</h3>
                 <hr>
-				<textarea id="add_wish_comment" style="height:30px" placeholder="Type your comment here..."> </textarea>
+				<textarea class="add_wish_comment" placeholder="Type your comment here..."> </textarea>
 			</div>
                <a href="#" id='wish_desc_close_button' class="close_button">Close</a>
                <a href="#" class="grantit_button">GrantIt!</a>
