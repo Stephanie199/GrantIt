@@ -65,4 +65,30 @@ document.addEventListener('DOMContentLoaded', function (arg){
 	if(isLogin){
 		manageWishBtn.parentNode.style.display = 'initial';
 	}
+	
+	/*
+	var deleteBtns = document.getElementsByClassName('table_icon_delete');
+	
+	for(var i = 0, size = deleteBtns.length; i < size; ++i){
+		var button = deleteBtns[i];
+		
+		button.onclick = function (arg){
+			var row = this.parentNode.parentNode;
+			var wid = row.cells[0].textContent;
+			
+			var form = document.createElement('form');
+			form.method = 'post';
+			form.target = '_self';
+			form.action = 'php/del_wish.php';
+			
+			var input = document.createElement('input');
+			input.type = 'hidden';
+			input.value = wid;
+			input.name = 'wid';
+			
+			form.appendChild(input);
+			form.submit();
+		};
+	}
+	*/
 });

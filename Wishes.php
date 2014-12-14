@@ -158,7 +158,7 @@
 							echo "<td>$row[price]</td>";
 							echo 
 								"<td>
-									<a href ='#' class='table_icon_delete'>Delete</a> 
+									<a onclick='return confirm(\"Confirm delete?\");' href ='php/del_wish.php?wid=$row[wid]' class='table_icon_delete'>Delete</a> 
 									<a href ='#' class='table_icon_edit'>Edit</a>
 								</td>";
 							echo "</tr>";
