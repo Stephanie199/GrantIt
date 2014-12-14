@@ -124,47 +124,47 @@
                <!-- Manage Wish Menu -->
                <div class="CSSTableGenerator" >
                
-                <table >
+                <table id='exchange_table'>
                     <tr>
-                        <td>
-                           No.
-                        </td>
-                        <td >
-                           Item for Exchange
-                        </td>
-                        <td>
-                            Images
-                        </td>
-                        <td>
-                            Description
-                        </td>
-                        <td>
-                            Minimum Price (SGD)
-                        </td>
-                        <td width="25%">
-                            
-                        </td>
-                    </tr>
+					<td>
+						No.
+					</td>
+					<td >
+						Item for Exchange
+					<td>
+					<td>
+						Images
+					</td>
+					<td>
+						Description
+					</td>
+					<td>
+						Minimum Price (SGD)
+					</td>
+					<td width="25%">
+						
+					</td>
+				</tr>
                     <tr>
-                        <td >
-                            Row 1
-                        </td>
-                        <td>
-                            Row 1
-                        </td>
-                        <td>
-                            Row 1
-                        </td>
+					<td >
+						Row 1
+					</td>
+					<td>
+						Row 1
+					</td>
+					<td>
+						Row 1
+					</td>
+					<td>
+						Row 1
+					</td>
+					<td>
+						Row 1
+					</td>
                          <td>
-                            Row 1
-                        </td>
-                         <td>
-                            Row 1
-                        </td>
-                         <td>
-                            <a href ="#" id="exchange_table_icon_delete" class="table_icon_delete">Delete</a> 
-                            <a href ="#" id="exchange_table_icon_edit" class="table_icon_edit">Edit</a>
-                        </td>
+						<a href ="#" id="exchange_table_icon_delete" class="table_icon_delete">Delete</a> 
+						<a href ="#" id="exchange_table_icon_edit" class="table_icon_edit">Edit</a>
+					</td>
                     </tr>
                 </table>
             </div>
