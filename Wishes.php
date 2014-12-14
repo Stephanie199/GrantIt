@@ -408,9 +408,9 @@
                 <img src="images/dummy_images/img1_harry_potter_books.jpg" width="100px" height="100px">
 			</div>
             <div  class="wrapper">
-				<h2 class="wish_title">Comments:</h2>
+				<h3 class="wish_comments">Comments:</h3>
                 <hr>
-				<textarea id="add_wish_description" style="height:30px" placeholder="Type your comment here..."> </textarea>
+				<textarea id="add_wish_comment" style="height:30px" placeholder="Type your comment here..."> </textarea>
 			</div>
                <a href="#" id='wish_desc_close_button' class="close_button">Close</a>
                <a href="#" class="grantit_button">GrantIt!</a>
