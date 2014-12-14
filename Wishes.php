@@ -149,9 +149,11 @@
 				<?php
 					if($loginStatus === $LOGIN_SUCCESS){
 						$wishes = genWish();
+						$i = 1;
 						while($row = $wishes -> fetch_assoc()){
 							echo "<tr>";
-							echo "<td>$row[wid]</td>";
+							echo "<td>$i</td>";
+							++$i;
 							echo "<td>$row[title]</td>";
 							echo "<td><img src='$row[image_url]' alt='$row[title]' title='$row[title]' width='100px' height='100px' /></td>";
 							echo "<td>$row[desc]</td>";

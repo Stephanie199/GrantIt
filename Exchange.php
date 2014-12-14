@@ -149,9 +149,11 @@
 				<?php
 					if($loginStatus === $LOGIN_SUCCESS){
 						$exchange = genExchange();
+						$i = 1;
 						while($row = $exchange -> fetch_assoc()){
 							echo "<tr>";
-							echo "<td>$row[eid]</td>";
+							echo "<td>$i</td>";
+							++$i;
 							echo "<td>$row[item_name]</td>";
 							echo "<td><img src='$row[image_url]' alt='$row[item_name]' title='$row[item_name]' width='100px' height='100px' /></td>";
 							echo "<td>$row[item_desc]</td>";
