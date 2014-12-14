@@ -158,8 +158,8 @@
 							echo "<td>$row[min_price]</td>";
 							echo 
 								"<td>
-									<a href ='#' id='exchange_table_icon_delete' class='table_icon_delete'>Delete</a>
-									<a href ='#' id='exchange_table_icon_edit' class='table_icon_edit'>Edit</a>
+									<a href ='#' class='table_icon_delete'>Delete</a>
+									<a href ='#' class='table_icon_edit'>Edit</a>
 								</td>";
 							echo "</tr>";
 						}
