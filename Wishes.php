@@ -123,7 +123,7 @@
                <!-- END of Manage Wish Button -->
                
                <!-- Manage Wish Menu -->
-               <div class="CSSTableGenerator" >
+               <div class="CSSTableGenerator">
                
 			 <table id='wish_table'>
 				<tr>
@@ -157,7 +157,7 @@
 							echo "<td>$row[title]</td>";
 							echo "<td><img src='$row[image_url]' alt='$row[title]' title='$row[title]' width='100px' height='100px' /></td>";
 							echo "<td>$row[desc]</td>";
-							echo "<td>$row[price]</td>";
+							echo "<td>S&#36;$row[price]</td>";
 							echo 
 								"<td>
 									<a onclick='return confirm(\"Confirm delete?\");' href ='php/del_wish.php?wid=$row[wid]' class='table_icon_delete'>Delete</a> 

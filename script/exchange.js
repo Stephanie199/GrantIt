@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function (arg){
 	
 	manageExchangeItemBtn.onclick = function (arg){
 		addExchangeItemBtn.parentNode.style.display = 'initial';
-		exchangeTable.parentNode.style.display = 'initial';
+		exchangeTable.parentNode.style.display = 'block';
 	};
 	
 	addExchangeItemBtn.onclick = function (arg){

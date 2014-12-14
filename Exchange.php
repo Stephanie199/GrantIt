@@ -157,7 +157,7 @@
 							echo "<td>$row[item_name]</td>";
 							echo "<td><img src='$row[image_url]' alt='$row[item_name]' title='$row[item_name]' width='100px' height='100px' /></td>";
 							echo "<td>$row[item_desc]</td>";
-							echo "<td>$row[min_price]</td>";
+							echo "<td>S&#36;$row[min_price]</td>";
 							echo 
 								"<td>
 									<a href='php/del_exchange.php?eid=$row[eid]' class='table_icon_delete' onclick=\"return confirm('Confirm delete?');\">Delete</a>

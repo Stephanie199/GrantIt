@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function (arg){
 	manageWishBtn.parentNode.style.display = 'none';
 	
 	manageWishBtn.onclick = function (arg){
-		wishTable.parentNode.style.display = 'initial';
+		wishTable.parentNode.style.display = 'block';
 		addWishBtn.parentNode.style.display = 'initial';
 	};
 	
